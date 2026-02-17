@@ -493,7 +493,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-center">
-    <div class="hero-eyebrow">Elche, Spain — Est. 2024</div>
+    <div class="hero-eyebrow">Lloret de Mar, Spain — Est. 2025</div>
     <h1 class="hero-title">
       <span class="line1">DOSE</span><br>
       <span class="line2"><em>Coffee</em></span>
@@ -527,9 +527,34 @@
 
 <!-- TAGLINE -->
 <section class="tagline-section">
-  <p class="tagline">every great coffee starts with <em>the right people</em> behind it</p>
+  <p class="tagline" id="rotating-quote">every great coffee starts with <em>the right people</em> behind it</p>
   <div class="tagline-line"></div>
 </section>
+
+<script>
+(function(){
+  const quotes = [
+    {text: "every great coffee starts with", em: "the right people", after: "behind it"},
+    {text: "life's too short for", em: "bad coffee", after: ""},
+    {text: "first we drink coffee, then we", em: "change the world", after: ""},
+    {text: "behind every successful person is a", em: "substantial amount", after: "of coffee"},
+    {text: "coffee is a language", em: "in itself", after: ""},
+    {text: "good ideas start with", em: "great coffee", after: ""},
+    {text: "the best stories are told", em: "over coffee", after: ""},
+    {text: "a cup of coffee shared with a friend is", em: "happiness tasted", after: ""},
+    {text: "coffee doesn't ask questions —", em: "coffee understands", after: ""},
+    {text: "brew it, sip it,", em: "own the day", after: ""}
+  ];
+  const el = document.getElementById('rotating-quote');
+  // pick quote based on day of year so it changes daily
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((now - start) / 86400000);
+  const idx = dayOfYear % quotes.length;
+  const q = quotes[idx];
+  el.innerHTML = q.text + ' <em>' + q.em + '</em> ' + q.after;
+})();
+</script>
 
 <!-- MARQUEE 2 -->
 <div class="marquee reverse alt">
@@ -602,7 +627,7 @@
   </div>
   <div class="footer-col">
     <div class="footer-label">Location</div>
-    <span>Elche, Valencia</span>
+    <span>Lloret de Mar, Barcelona</span>
     <span>Spain 🇪🇸</span>
   </div>
   <div class="footer-col">
