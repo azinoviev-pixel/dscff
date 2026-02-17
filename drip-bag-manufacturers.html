@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производители Drip Coffee Bags в Европе — Полный Гайд</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --coffee-dark: #1a120b;
+            --coffee-brown: #3c2a21;
+            --coffee-medium: #5c4033;
+            --coffee-caramel: #d4a574;
+            --coffee-cream: #e8d5b7;
+            --coffee-light: #f5efe6;
+            --coffee-milk: #faf7f2;
+            --accent-gold: #c8956c;
+            --accent-green: #4a7c59;
+            --accent-red: #c45c3e;
+            --star-yellow: #e8b731;
+            --tag-blue: #3a6ea5;
+            --tag-purple: #7c5cbf;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--coffee-milk);
+            color: var(--coffee-dark);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--coffee-dark) 0%, var(--coffee-brown) 50%, var(--coffee-medium) 100%);
+            color: var(--coffee-cream);
+            padding: 80px 24px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .hero h1 span {
+            color: var(--coffee-caramel);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            max-width: 650px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--coffee-caramel);
+            color: var(--coffee-dark);
+            padding: 6px 18px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* ===== NAV ===== */
+        .toc {
+            background: white;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        .toc-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .toc a {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--coffee-medium);
+            text-decoration: none;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .toc a:hover {
+            background: var(--coffee-light);
+            color: var(--coffee-dark);
+        }
+        .toc a.active {
+            background: var(--coffee-dark);
+            color: white;
+        }
+
+        /* ===== MAIN LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            margin: 60px 0 32px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid var(--coffee-caramel);
+        }
+        .section-header:first-child { margin-top: 0; }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--coffee-dark);
+            margin-bottom: 8px;
+        }
+        .section-header p {
+            color: var(--coffee-medium);
+            font-size: 0.95rem;
+        }
+        .section-count {
+            display: inline-block;
+            background: var(--coffee-caramel);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        /* ===== COMPANY CARDS ===== */
+        .company-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s, transform 0.2s;
+            position: relative;
+        }
+        .company-card:hover {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .company-card.featured {
+            border-left: 4px solid var(--star-yellow);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .card-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--coffee-dark);
+        }
+        .card-header h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .card-header h3 a:hover {
+            color: var(--accent-gold);
+        }
+        .star-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
+            color: #8b6914;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        .star-badge::before { content: '⭐'; font-size: 0.7rem; }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .tag-country { background: #e8f0fe; color: #1a56db; }
+        .tag-moq { background: #e6f4ea; color: #137333; }
+        .tag-privatelabel { background: #fce8e6; color: #c5221f; }
+        .tag-copacking { background: #f3e8fd; color: #7c3aed; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .info-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 10px 14px;
+            background: var(--coffee-milk);
+            border-radius: 10px;
+            font-size: 0.88rem;
+        }
+        .info-item .icon {
+            flex-shrink: 0;
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .info-item .label {
+            color: var(--coffee-medium);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 2px;
+        }
+        .info-item .value {
+            color: var(--coffee-dark);
+            font-weight: 500;
+        }
+        .info-item a {
+            color: var(--tag-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .info-item a:hover { text-decoration: underline; }
+
+        .card-details {
+            font-size: 0.9rem;
+            color: #444;
+            line-height: 1.7;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        .card-details strong { color: var(--coffee-dark); }
+
+        /* ===== MOQ TABLE ===== */
+        .moq-table-wrap {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+        thead {
+            background: var(--coffee-dark);
+            color: white;
+        }
+        th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            vertical-align: top;
+        }
+        tr:hover td { background: var(--coffee-light); }
+        td a {
+            color: var(--tag-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        td a:hover { text-decoration: underline; }
+        .moq-highlight {
+            background: #e6f4ea;
+            color: #137333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        /* ===== PACKAGING TABLE ===== */
+        .packaging-table td:first-child { font-weight: 600; }
+
+        /* ===== SUMMARY BOXES ===== */
+        .summary-box {
+            background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-brown));
+            color: var(--coffee-cream);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+        }
+        .summary-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            color: var(--coffee-caramel);
+        }
+        .summary-box p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        /* ===== MACHINE SECTION ===== */
+        .machine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .machine-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .machine-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .machine-card h4 a { color: var(--coffee-dark); text-decoration: none; }
+        .machine-card h4 a:hover { color: var(--accent-gold); }
+        .machine-card p {
+            font-size: 0.85rem;
+            color: #555;
+        }
+        .price-tag {
+            display: inline-block;
+            background: #fff3cd;
+            color: #8b6914;
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--coffee-medium);
+            font-size: 0.82rem;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            margin-top: 60px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .company-card { padding: 20px; }
+            .info-grid { grid-template-columns: 1fr; }
+            .hero { padding: 50px 20px 40px; }
+        }
+
+        /* Simple anchoring offset for sticky nav */
+        [id] { scroll-margin-top: 70px; }
+    </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+    <div class="hero-badge">Исследование · Февраль 2026</div>
+    <h1>Производители <span>Drip Coffee Bags</span> в Европе</h1>
+    <p>Полный гайд: ко-пакеры, ростеры, поставщики упаковки и оборудования. С контактами, MOQ и активными ссылками.</p>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav class="toc">
+    <div class="toc-inner">
+        <a href="#copackers" class="active">🏭 Ко-пакеры</a>
+        <a href="#spain">🇪🇸 Испания / Португалия</a>
+        <a href="#europe">🇪🇺 Другие страны</a>
+        <a href="#packaging">📦 Упаковка</a>
+        <a href="#machines">⚙️ Машины</a>
+        <a href="#moq-table">📊 Сводная таблица MOQ</a>
+        <a href="#conclusion">💡 Выводы</a>
+    </div>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================ -->
+<!-- SECTION 1: CO-PACKERS -->
+<!-- ============================================================ -->
+<div class="section-header" id="copackers">
+    <h2><span class="section-count">1</span> Full-service ко-пакеры и private label</h2>
+    <p>Компании, которые измельчают, фасуют, запаивают и упаковывают drip bags под вашим брендом</p>
+</div>
+
+<!-- Coffee Plant -->
+<div class="company-card featured">
+    <div class="card-header">
+        <h3><a href="https://coffeeplant.pl/pages/drip-bag-eng" target="_blank">☕ Coffee Plant</a></h3>
+        <span class="star-badge">Best for small batches</span>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇵🇱 Польша</span>
+        <span class="tag tag-moq">MOQ: 1,000 шт</span>
+        <span class="tag tag-privatelabel">Private Label ✓</span>
+        <span class="tag tag-copacking">Full Co-Packing</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://coffeeplant.pl/pages/drip-bag-eng" target="_blank">coffeeplant.pl/pages/drip-bag-eng</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Email</div><div class="value"><a href="mailto:hej@coffeeplant.pl">hej@coffeeplant.pl</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">MOQ</div><div class="value"><strong>1,000 штук</strong> — идеально для тестов</div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Сроки</div><div class="value">1–2 нед (стикер) / 2–4 нед (печать)</div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Можно использовать их specialty зёрна <strong>ИЛИ</strong> отправить свои. Сертифицированные Arabica Q Graders на штате. Кофе мелется непосредственно перед фасовкой, запаивается в азотной атмосфере. <strong>Срок годности 18 месяцев.</strong> Три уровня упаковки: белый пакет + стикер, полностью запечатанный пакет, или запечатанный пакет + доп. стикер. Коробки на заказ (стандартная 10 шт или кастомная). Можно разные этикетки в одном проекте.
+    </div>
+</div>
+
+<!-- MyCoffeebag -->
+<div class="company-card featured">
+    <div class="card-header">
+        <h3><a href="https://mycoffeebag.de/pages/dripbag-lohnabfullung-fur-roster" target="_blank">☕ MyCoffeebag</a></h3>
+        <span class="star-badge">Самый опытный в Европе</span>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇩🇪 Германия</span>
+        <span class="tag tag-moq">MOQ: по запросу</span>
+        <span class="tag tag-privatelabel">Contract Filling ✓</span>
+        <span class="tag tag-copacking">С 2015 года</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://www.mycoffeebag.de" target="_blank">mycoffeebag.de</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Контакт</div><div class="value"><a href="mailto:carolin.streck@mycoffeebag.de">carolin.streck@mycoffeebag.de</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Телефон</div><div class="value"><a href="tel:+4997716301014">+49 9771 6301014</a> (Пн–Пт 08–17)</div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Адрес</div><div class="value">Am Kebigsgraben 15, 97616 Salz, Germany</div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Вы отправляете зёрна (мешки, вёдра, пакеты) → они мелют до нужной степени → 10г на дрип-пакет → ваш дизайн. Пакеты: крафт в коричневом, белом или чёрном с zip-открыванием. <strong>Пробная фасовка перед производством.</strong> Срок: ~14 дней от получения товара до отгрузки. Клиенты: <strong>The Barn, Public Coffee Roasters, Hanseatic, Reinholz, Minges</strong>. Trusted Shops «Excellent» 5+ лет подряд.
+    </div>
+</div>
+
+<!-- Bagdrip -->
+<div class="company-card">
+    <div class="card-header">
+        <h3><a href="https://bagdrip.com/en/private-labeling.html" target="_blank">☕ Bagdrip</a></h3>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇵🇱 Познань, Польша</span>
+        <span class="tag tag-moq">MOQ: по запросу</span>
+        <span class="tag tag-privatelabel">Private Label ✓</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://bagdrip.com/en/private-labeling.html" target="_blank">bagdrip.com/en/private-labeling</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Email</div><div class="value"><a href="mailto:hello@bagdrip.com">hello@bagdrip.com</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Адрес</div><div class="value">Franciszka Ratajczaka 31, 61-816 Poznań</div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Формат</div><div class="value">11г/пакет, light-roast specialty Arabica</div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Процесс: отправляете кофе → результаты от Specialty Coffee Master + 3 образца → выбираете → присылаете дизайн → получаете продукт. Форматы: одноразовый фильтр, саше (drip + кофе в запечатанном пакете), или Bagdrip Box (8 саше). Доставка по всему ЕС.
+    </div>
+</div>
+
+<!-- Öye Packaging -->
+<div class="company-card featured">
+    <div class="card-header">
+        <h3><a href="https://oyepackaging.com" target="_blank">☕ Öye Packaging</a></h3>
+        <span class="star-badge">Самый полный сервис</span>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇪🇪 Эстония / 🇱🇻 Латвия</span>
+        <span class="tag tag-moq">MOQ: настраиваемый</span>
+        <span class="tag tag-copacking">Full Co-Packing + Дизайн</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://oyepackaging.com" target="_blank">oyepackaging.com</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Контакт</div><div class="value"><a href="https://oyepackaging.com/contact" target="_blank">Форма на сайте</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Продукты</div><div class="value">Drip bags, brew bags, cold brew bags</div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Бонус</div><div class="value">3D-мокапы, фотосессия, дизайн-сервис</div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Самый комплексный ко-пакер в Европе. Отправляете 1 кг кофе → получаете 4+ варианта образцов → каппинг → выбор → продакшн. 50+ сотрудников, эко-материалы, возобновляемая энергия. Кастомная упаковка: цифровая и ротогравюрная печать. <strong>Made in Europe.</strong>
+    </div>
+</div>
+
+<!-- Profista -->
+<div class="company-card">
+    <div class="card-header">
+        <h3><a href="https://profista.de/en" target="_blank">☕ Profista</a></h3>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇮🇹 Италия / 🇩🇪 Германия</span>
+        <span class="tag tag-moq">MOQ: пробные условия</span>
+        <span class="tag tag-privatelabel">B2B Branding ✓</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://profista.de/en/drip-coffee-for-busines" target="_blank">profista.de/en</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Телефон</div><div class="value"><a href="tel:+4915560988857">+49 15560988857</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Формат</div><div class="value">12г/пакет, 100% Arabica specialty</div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Фокус</div><div class="value">HoReCa: отели, корпоративы, ивенты</div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Форматы: Hotel Premium Welcome Set, Impulse Box, Starter Bundle B2B, Corporate Gift Kit, Smart Coffee Station, Event Fuel Pack. Маркап до 100–500%. Сайт на EN, DE, RU, UA. Пробные условия для новых партнёров.
+    </div>
+</div>
+
+<!-- Wholesale Coffee Suppliers -->
+<div class="company-card featured">
+    <div class="card-header">
+        <h3><a href="https://wholesalecoffeesuppliers.co" target="_blank">☕ Wholesale Coffee Suppliers</a></h3>
+        <span class="star-badge">Единственный в Испании!</span>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇪🇸 Аликанте, Испания / 🇮🇹 Турин</span>
+        <span class="tag tag-moq">MOQ: варьируется</span>
+        <span class="tag tag-privatelabel">Full Private Label ✓</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://wholesalecoffeesuppliers.co" target="_blank">wholesalecoffeesuppliers.co</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Телефон ES</div><div class="value"><a href="tel:+34965258257">+34 965 25 82 57</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">WhatsApp</div><div class="value"><a href="tel:+34628744644">+34 628 744 644</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Адрес ES</div><div class="value">C/Franca 19, 03698 Agost, Alicante</div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Семейная кофейная фабрика в третьем поколении. <strong>Единственная подтверждённая компания в Испании</strong>, явно предлагающая private label drip bags. Также: зёрна, молотый, капсулы, растворимый. Обслуживают USA, Europe, Middle East, Far East. Бесплатный персональный аккаунт-менеджер. Можно печатные пакеты или пакеты с наклейками. Есть скачиваемый каталог/прайс.
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: SPAIN / PORTUGAL -->
+<!-- ============================================================ -->
+<div class="section-header" id="spain">
+    <h2><span class="section-count">2</span> Ростеры Испании и Португалии с drip bags</h2>
+    <p>Владеют оборудованием, но public co-packing не рекламируют. Стоит связаться напрямую.</p>
+</div>
+
+<!-- Curador -->
+<div class="company-card">
+    <div class="card-header">
+        <h3><a href="https://curador.es" target="_blank">🇪🇸 Curador Coffee — Мадрид</a></h3>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇪🇸 Мадрид</span>
+        <span class="tag tag-copacking">Ко-пакинг: ❓ спросить</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://curador.es" target="_blank">curador.es</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">B2B</div><div class="value"><a href="https://curador.es/en/pages/b2b" target="_blank">curador.es/en/pages/b2b</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Email</div><div class="value"><a href="mailto:hola@curador.coffee">hola@curador.coffee</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Формат</div><div class="value">11г/саше, азот, компостируемый фильтр</div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Куратирует кофе от лучших ростеров Европы, мелет и пакует в drip bags. Их бизнес-модель (упаковка чужого кофе) = у них есть оборудование. B2B-страница: оборудование, консалтинг, обучение. <strong>Высокий потенциал для ко-пакинга.</strong>
+    </div>
+</div>
+
+<!-- Three Marks -->
+<div class="company-card">
+    <div class="card-header">
+        <h3><a href="https://threemarkscoffee.com" target="_blank">🇪🇸 Three Marks Coffee — Барселона</a></h3>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://threemarkscoffee.com" target="_blank">threemarkscoffee.com</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Адрес</div><div class="value">C. de Pere IV 205, Barcelona 08018</div></div>
+        </div>
+    </div>
+    <div class="card-details">Известный specialty ростер из Барселоны. Drip bags 10г/пакет, 10 шт в упаковке. Основатели — бывшие Nømad Coffee. Есть wholesale-страница.</div>
+</div>
+
+<!-- Cocóra -->
+<div class="company-card">
+    <div class="card-header">
+        <h3><a href="https://cocoracoffee.es" target="_blank">🇪🇸 Cocóra Specialty Coffees — Малага</a></h3>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://cocoracoffee.es/collections/drip-bag-coffee" target="_blank">cocoracoffee.es</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Адрес</div><div class="value">Calle Beamar 3, 29649 Mijas Costa, Málaga</div></div>
+        </div>
+    </div>
+    <div class="card-details">Specialty ростер. Drip bags 13г/пакет. Также дистрибьютор La Marzocco. Есть B2B wholesale.</div>
+</div>
+
+<!-- UCC -->
+<div class="company-card featured">
+    <div class="card-header">
+        <h3><a href="https://ucc-europe.com/network/opco-spain/" target="_blank">🇪🇸 UCC Spain & Portugal</a></h3>
+        <span class="star-badge">Потенциальный Major Player</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">Сайт</div><div class="value"><a href="https://ucc-europe.com/network/opco-spain/" target="_blank">ucc-europe.com</a></div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Контакт</div><div class="value"><a href="https://ucc-europe.com/network/opco-spain/" target="_blank">Форма на сайте</a></div></div>
+        </div>
+    </div>
+    <div class="card-details">
+        Одна из <strong>крупнейших обжарочных фабрик в Южной Европе</strong>. UCC Japan — изобретатели формата drip coffee bag и мировой лидер. В UK их дочка Ueshima Coffee Company запустила pour-over drip bags через Waitrose, Sainsbury's, Morrisons. <strong>Высокая вероятность, что могут производить drip bags из своей испанской фабрики. Приоритетный контакт для крупных заказов в Испании.</strong>
+    </div>
+</div>
+
+<!-- Portugal -->
+<div class="company-card">
+    <div class="card-header">
+        <h3>🇵🇹 Ростеры Португалии</h3>
+    </div>
+    <div class="info-grid">
+        <div class="info-item">
+            <div><div class="label">The Folks</div><div class="value"><a href="https://thefolks.pt" target="_blank">thefolks.pt</a> — Лиссабон, single-origin drip bags</div></div>
+        </div>
+        <div class="info-item">
+            <div><div class="label">Unity Coffee</div><div class="value"><a href="https://unitycoffee.pt" target="_blank">unitycoffee.pt</a> — обжарка 2x/нед, доставка ES/PT от €30</div></div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: OTHER EUROPE -->
+<!-- ============================================================ -->
+<div class="section-header" id="europe">
+    <h2><span class="section-count">3</span> Другие европейские бренды с drip bags</h2>
+    <p>Продают drip bags под своим брендом. Некоторые могут принимать ко-пакинг запросы.</p>
+</div>
+
+<!-- Czech -->
+<div class="company-card">
+    <div class="card-header"><h3>🇨🇿 Drip It s.r.o. — Прага</h3></div>
+    <div class="info-grid">
+        <div class="info-item"><div><div class="label">Сайт</div><div class="value"><a href="https://www.dripit.cz" target="_blank">dripit.cz</a></div></div></div>
+        <div class="info-item"><div><div class="label">Адрес</div><div class="value">Petrská 1216/19, 110 00 Praha 1</div></div></div>
+    </div>
+    <div class="card-details">Основана 2014. Чешская обжарка, 10г/пакет. Японские фильтры. Своё оборудование — <strong>стоит спросить про ко-пакинг.</strong> Также есть эспрессо-бар в Праге.</div>
+</div>
+
+<!-- Latvia -->
+<div class="company-card">
+    <div class="card-header"><h3>🇱🇻 Café Día — Латвия</h3></div>
+    <div class="info-grid">
+        <div class="info-item"><div><div class="label">Сайт</div><div class="value"><a href="https://dripcoffee.lv/en" target="_blank">dripcoffee.lv</a></div></div></div>
+    </div>
+    <div class="card-details">Drip bags 11г, коробки по 10–11 шт. Есть corporate/B2B страница. Доставка: Балтика, Болгария, Финляндия, Германия, Испания, Украина. <strong>Могут делать корпоративный брендинг.</strong></div>
+</div>
+
+<!-- Germany roster list -->
+<div class="company-card">
+    <div class="card-header"><h3>🇩🇪 Ростеры Германии</h3></div>
+    <div class="info-grid">
+        <div class="info-item"><div><div class="label">That's Coffee</div><div class="value"><a href="https://thats-coffee.de" target="_blank">thats-coffee.de</a> — 10г/пакет, «customized bags for your company»</div></div></div>
+        <div class="info-item"><div><div class="label">Rösttrommel</div><div class="value"><a href="https://www.roesttrommel.de" target="_blank">roesttrommel.de</a> — Нюрнберг, 13г, bulk для отелей. <a href="mailto:matthias@roesttrommel.de">matthias@roesttrommel.de</a></div></div></div>
+        <div class="info-item"><div><div class="label">Kaffeerösterei Konstanz</div><div class="value"><a href="https://kaffeeroesterei-konstanz.de" target="_blank">kaffeeroesterei-konstanz.de</a> · <a href="tel:+4975313682 61">+49 7531 368261</a></div></div></div>
+        <div class="info-item"><div><div class="label">Gourmet Rösterei</div><div class="value"><a href="https://gourmetroesterei.de" target="_blank">gourmetroesterei.de</a> — азот, вальцовая помол</div></div></div>
+    </div>
+</div>
+
+<!-- Netherlands -->
+<div class="company-card">
+    <div class="card-header"><h3>🇳🇱 Нидерланды</h3></div>
+    <div class="info-grid">
+        <div class="info-item"><div><div class="label">LOT61</div><div class="value"><a href="https://lot61.com" target="_blank">lot61.com</a> — Амстердам, 10/коробка</div></div></div>
+        <div class="info-item"><div><div class="label">Shuttle Coffee</div><div class="value"><a href="https://shuttle.im" target="_blank">shuttle.im</a> — Амстердам, азот, specialty</div></div></div>
+    </div>
+</div>
+
+<!-- UK -->
+<div class="company-card">
+    <div class="card-header"><h3>🇬🇧 Великобритания</h3></div>
+    <div class="info-grid">
+        <div class="info-item"><div><div class="label">Lincoln & York</div><div class="value"><a href="https://lincolnandyork.com" target="_blank">lincolnandyork.com</a> — крупный контрактный пакер, 30+ лет, 6 ростеров, 15 линий. <strong>Уточнить drip bag формат.</strong></div></div></div>
+        <div class="info-item"><div><div class="label">Assembly Coffee</div><div class="value"><a href="https://assemblycoffee.co.uk" target="_blank">assemblycoffee.co.uk</a> — Лондон, 11г, азот. <a href="mailto:orders@assemblycoffee.co.uk">orders@assemblycoffee.co.uk</a></div></div></div>
+        <div class="info-item"><div><div class="label">Drip Through Coffee</div><div class="value"><a href="https://www.dripthroughcoffee.co.uk" target="_blank">dripthroughcoffee.co.uk</a> — азот, биоразлагаемый</div></div></div>
+        <div class="info-item"><div><div class="label">König Coffee</div><div class="value"><a href="https://konigcoffee.com" target="_blank">konigcoffee.com</a> — 12.5г, золотая медаль Aurora</div></div></div>
+    </div>
+</div>
+
+<!-- France -->
+<div class="company-card">
+    <div class="card-header"><h3>🇫🇷 Франция</h3></div>
+    <div class="info-grid">
+        <div class="info-item"><div><div class="label">Araku Coffee</div><div class="value"><a href="https://www.arakucoffee.com" target="_blank">arakucoffee.com</a> — Париж, 11.5г, organic, SCA 87+</div></div></div>
+        <div class="info-item"><div><div class="label">Drip Bag Factory</div><div class="value"><a href="https://dripbagfactory.com/en" target="_blank">dripbagfactory.com</a> — также упаковка (см. секцию ниже)</div></div></div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: PACKAGING ONLY -->
+<!-- ============================================================ -->
+<div class="section-header" id="packaging">
+    <h2><span class="section-count">4</span> Поставщики упаковки (пустые drip bags)</h2>
+    <p>Продают пустые фильтры, саше и коробки. DIY-путь к производству drip bags.</p>
+</div>
+
+<div class="moq-table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Компания</th>
+                <th>Страна</th>
+                <th>Продукты</th>
+                <th>MOQ</th>
+                <th>Цены</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://dripbagfactory.com/en" target="_blank"><strong>Drip Bag Factory</strong></a></td>
+                <td>🇫🇷 Франция</td>
+                <td>Фильтры (9–12г), саше, коробки (10–12), стойкие пакеты</td>
+                <td><span class="moq-highlight">Нет минимума! Тест-пак €5</span></td>
+                <td>Фильтры от €70, пакеты от €40, коробки от €50</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.thebagbroker.eu/product-category/drip-coffee/" target="_blank"><strong>The Bag Broker EU</strong></a></td>
+                <td>🇪🇺 ЕС / 🇬🇧 UK</td>
+                <td>Drip-фильтры (1000/коробка), крафт-пакеты (5000/коробка)</td>
+                <td><span class="moq-highlight">Нет минимума на стоковые</span></td>
+                <td>Фильтры ~€157/1000, пакеты ~€230/5000</td>
+            </tr>
+            <tr>
+                <td><a href="https://mtpak.coffee/drip-coffee-filter-coffee-bag/" target="_blank"><strong>MTPak Coffee</strong></a></td>
+                <td>🌍 Глобальный</td>
+                <td>Кастомные drip bags, фильтры, deluxe коробки</td>
+                <td><span class="moq-highlight">500 (plain), 1000 (1 цвет), 10К (кастом)</span></td>
+                <td>Образцы от $150/дизайн</td>
+            </tr>
+            <tr>
+                <td><a href="https://origamidripbag.com" target="_blank"><strong>Origami Drip Bag</strong></a></td>
+                <td>🌍 Международный</td>
+                <td>Pacchit bags, dip-style, VFR drip bags, cold brew</td>
+                <td>Кастом от 500 шт</td>
+                <td>30 дней лид-тайм на кастом</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.dutchcoffeepack.com" target="_blank"><strong>Dutch Coffee Pack</strong></a></td>
+                <td>🇳🇱 Нидерланды</td>
+                <td>Стандартные кофе-пакеты (doypacks, box pouches)</td>
+                <td>Сток от 500 шт</td>
+                <td>ISO/BRC сертификация</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: MACHINES -->
+<!-- ============================================================ -->
+<div class="section-header" id="machines">
+    <h2><span class="section-count">5</span> Машины для фасовки drip bags</h2>
+    <p>Для ростеров, которые хотят производить сами. От $8,500 до $40,000+.</p>
+</div>
+
+<div class="company-card featured">
+    <div class="card-header">
+        <h3><a href="https://cmsale.com" target="_blank">⚙️ CMSale / Coffee Tools — Европейский дистрибьютор</a></h3>
+        <span class="star-badge">Ближайший к тебе</span>
+    </div>
+    <div class="tags">
+        <span class="tag tag-country">🇵🇱 Piła, Польша</span>
+    </div>
+    <div class="info-grid">
+        <div class="info-item"><div><div class="label">Сайт</div><div class="value"><a href="https://cmsale.com/products/packaging/automatic-packaging-machines/drip-coffee-bag-packing-machine" target="_blank">cmsale.com</a></div></div></div>
+        <div class="info-item"><div><div class="label">Email</div><div class="value"><a href="mailto:info@cmsale.com">info@cmsale.com</a></div></div></div>
+        <div class="info-item"><div><div class="label">Szymon Ciszek</div><div class="value"><a href="mailto:szymon@cmsale.com">szymon@cmsale.com</a> · <a href="tel:+48783239067">+48 783 239 067</a></div></div></div>
+        <div class="info-item"><div><div class="label">Kacper Ornat</div><div class="value"><a href="mailto:kacper@cmsale.com">kacper@cmsale.com</a> · <a href="tel:+48690567942">+48 690 567 942</a></div></div></div>
+    </div>
+    <div class="card-details">~40 пакетов/мин, ультразвуковая сварка, 5–15г дозировка. Также дистрибьютор Stronghold, IKAWA, Aillio. Адрес: Składowa 15, 64-920 Piła, Poland.</div>
+</div>
+
+<div class="machine-grid">
+    <div class="machine-card">
+        <h4><a href="https://fuso-int.com" target="_blank">🇯🇵 FUSO International</a></h4>
+        <p>Osaka, Japan. Золотой стандарт. FPG-T1 (50/мин), FPG-LT (60/мин), FP-80T (80/мин). CE-сертификация. Азот. 150+ клиентов.</p>
+        <span class="price-tag">~$40,000+</span>
+    </div>
+    <div class="machine-card">
+        <h4><a href="https://www.hondapack.com" target="_blank">🇨🇳 HondaPack</a></h4>
+        <p>C19II / C19D / C19H — 35–70 bags/min. Клиенты в DE, ES, IT, TR, UA, UK. CE-сертификация.</p>
+        <span class="price-tag">$8,500–$30,000</span>
+    </div>
+    <div class="machine-card">
+        <h4><a href="https://www.afpakmachine.com/drip-coffee-bag-packing-machine/" target="_blank">🇨🇳 AFPAK Machine</a></h4>
+        <p>Полностью автоматические. 30–70 bags/min. CE.</p>
+        <span class="price-tag">По запросу</span>
+    </div>
+    <div class="machine-card">
+        <h4><a href="https://www.liquidfillingsolution.com/small-drip-coffee-bag-packaging-machine/" target="_blank">🇨🇳 Liquid Filling Solution</a></h4>
+        <p>Компактные модели для малых производств.</p>
+        <span class="price-tag">По запросу</span>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: MOQ TABLE -->
+<!-- ============================================================ -->
+<div class="section-header" id="moq-table">
+    <h2><span class="section-count">6</span> Сводная таблица: все ко-пакеры по MOQ</h2>
+    <p>Быстрый поиск по размеру партии</p>
+</div>
+
+<h3 style="margin: 24px 0 12px; color: var(--accent-green); font-size: 1.1rem;">🟢 Маленькие партии (до 5,000 штук) — ПРИОРИТЕТ</h3>
+<div class="moq-table-wrap">
+    <table>
+        <thead><tr><th>Компания</th><th>Страна</th><th>MOQ</th><th>Тип</th><th>Контакт</th></tr></thead>
+        <tbody>
+            <tr><td><a href="https://coffeeplant.pl/pages/drip-bag-eng" target="_blank">Coffee Plant ⭐</a></td><td>🇵🇱 Польша</td><td><span class="moq-highlight">1,000 шт</span></td><td>Full co-packing</td><td><a href="mailto:hej@coffeeplant.pl">hej@coffeeplant.pl</a></td></tr>
+            <tr><td><a href="https://mycoffeebag.de/pages/dripbag-lohnabfullung-fur-roster" target="_blank">MyCoffeebag</a></td><td>🇩🇪 Германия</td><td>Гибкий</td><td>Contract filling</td><td><a href="mailto:carolin.streck@mycoffeebag.de">carolin.streck@mycoffeebag.de</a></td></tr>
+            <tr><td><a href="https://bagdrip.com/en/private-labeling.html" target="_blank">Bagdrip</a></td><td>🇵🇱 Польша</td><td>По запросу</td><td>Private label</td><td><a href="mailto:hello@bagdrip.com">hello@bagdrip.com</a></td></tr>
+            <tr><td><a href="https://oyepackaging.com" target="_blank">Öye Packaging</a></td><td>🇪🇪/🇱🇻</td><td>Настраиваемый</td><td>Full co-packing</td><td><a href="https://oyepackaging.com/contact" target="_blank">Форма на сайте</a></td></tr>
+            <tr><td><a href="https://profista.de/en" target="_blank">Profista</a></td><td>🇮🇹/🇩🇪</td><td>Пробные условия</td><td>B2B branding</td><td><a href="tel:+4915560988857">+49 15560988857</a></td></tr>
+            <tr><td><a href="https://dripbagfactory.com/en" target="_blank">Drip Bag Factory</a> <em>(упаковка)</em></td><td>🇫🇷 Франция</td><td><span class="moq-highlight">Нет мин. (тест €5)</span></td><td>Пустые фильтры/саше</td><td><a href="https://dripbagfactory.com/en" target="_blank">dripbagfactory.com</a></td></tr>
+            <tr><td><a href="https://www.thebagbroker.eu" target="_blank">The Bag Broker</a> <em>(упаковка)</em></td><td>🇪🇺 ЕС</td><td><span class="moq-highlight">Нет мин. на стоковые</span></td><td>Пустые фильтры/пакеты</td><td><a href="https://www.thebagbroker.eu" target="_blank">thebagbroker.eu</a></td></tr>
+            <tr><td><a href="https://mtpak.coffee" target="_blank">MTPak Coffee</a> <em>(упаковка)</em></td><td>🌍 Глобальный</td><td><span class="moq-highlight">500 (plain stock)</span></td><td>Кастомная упаковка</td><td><a href="https://mtpak.coffee" target="_blank">mtpak.coffee</a></td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 style="margin: 32px 0 12px; color: var(--tag-blue); font-size: 1.1rem;">🔵 Средние и крупные партии (5,000+)</h3>
+<div class="moq-table-wrap">
+    <table>
+        <thead><tr><th>Компания</th><th>Страна</th><th>MOQ</th><th>Тип</th><th>Контакт</th></tr></thead>
+        <tbody>
+            <tr><td><a href="https://wholesalecoffeesuppliers.co" target="_blank">Wholesale Coffee Suppliers ⭐</a></td><td>🇪🇸 Испания</td><td>Варьируется</td><td>Full private label</td><td><a href="tel:+34628744644">+34 628 744 644</a> (WhatsApp)</td></tr>
+            <tr><td><a href="https://ucc-europe.com/network/opco-spain/" target="_blank">UCC Spain & Portugal</a></td><td>🇪🇸 Испания</td><td>Enterprise</td><td>Private label roasting</td><td><a href="https://ucc-europe.com" target="_blank">ucc-europe.com</a></td></tr>
+            <tr><td><a href="https://lincolnandyork.com" target="_blank">Lincoln & York</a></td><td>🇬🇧 UK</td><td>Средний/крупный</td><td>Contract roasting + packing</td><td><a href="https://lincolnandyork.com" target="_blank">lincolnandyork.com</a></td></tr>
+            <tr><td><a href="https://mycoffeebag.de" target="_blank">MyCoffeebag</a></td><td>🇩🇪 Германия</td><td>Гибкий</td><td>Contract filling</td><td><a href="tel:+4997716301014">+49 9771 6301014</a></td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: CONCLUSION -->
+<!-- ============================================================ -->
+<div class="section-header" id="conclusion">
+    <h2><span class="section-count">7</span> В
