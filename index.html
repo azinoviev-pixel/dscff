@@ -4,94 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DOSE COFFEE</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syne:wght@400;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <style>
-  @font-face {
-    font-family: 'ClashDisplay';
-    src: url('https://cdn.jsdelivr.net/gh/nicholasjcollins/clashgrotesk@latest/fonts/ClashGrotesk-Bold.woff2') format('woff2');
-    font-weight: 700;
-  }
-
   :root {
-    --black: #050505;
-    --white: #f0ece6;
-    --cream: #d4cfc5;
-    --amber: #e8a44a;
-    --dim: #3a3835;
+    --black: #0a0a0a;
+    --dark: #111;
+    --card: #161616;
+    --border: #222;
+    --white: #f2ede6;
+    --cream: #c4bfb5;
+    --amber: #d4943c;
+    --amber-light: #e8b06a;
+    --dim: #444;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
     background: var(--black);
     color: var(--white);
-    font-family: 'Syne', sans-serif;
-    cursor: default;
+    font-family: 'Outfit', sans-serif;
     overflow-x: hidden;
   }
 
-  /* GRAIN */
+  /* GRAIN OVERLAY */
   body::after {
     content: '';
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    opacity: 0.035;
+    inset: 0;
+    opacity: 0.03;
     pointer-events: none;
     z-index: 9999;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  /* NAV */
+  /* ============ NAV ============ */
   nav {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    padding: 28px 40px;
+    padding: 24px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    mix-blend-mode: difference;
+    backdrop-filter: blur(10px);
+    background: rgba(10,10,10,0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
   }
 
-  .nav-logo {
+  .nav-brand {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 4px;
+    font-size: 28px;
+    letter-spacing: 6px;
     color: var(--white);
+    text-decoration: none;
   }
 
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    list-style: none;
+  .nav-brand em {
+    font-style: normal;
+    color: var(--amber);
   }
 
-  .nav-links a {
+  .nav-right {
+    display: flex; gap: 32px; align-items: center;
+  }
+
+  .nav-right a {
     color: var(--cream);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 400;
     transition: color 0.3s;
-    position: relative;
   }
 
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px; left: 0;
-    width: 0; height: 1px;
-    background: var(--amber);
-    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
+  .nav-right a:hover { color: var(--amber); }
 
-  .nav-links a:hover { color: var(--amber); }
-  .nav-links a:hover::after { width: 100%; }
-
-  /* HERO */
+  /* ============ HERO ============ */
   .hero {
     height: 100vh;
     display: flex;
@@ -100,365 +91,513 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    background: radial-gradient(ellipse at 50% 0%, rgba(212,148,60,0.06) 0%, transparent 60%);
   }
 
-  .hero-bg-text {
+  .hero-scroll {
     position: absolute;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(200px, 28vw, 400px);
-    color: transparent;
-    -webkit-text-stroke: 1px var(--dim);
-    letter-spacing: -5px;
-    user-select: none;
-    opacity: 0.3;
-    animation: slideRight 20s linear infinite;
-    white-space: nowrap;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dim);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: fadeInUp 1s 1.5s both;
   }
 
-  @keyframes slideRight {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  .hero-scroll .line {
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, var(--amber), transparent);
+    animation: scrollPulse 2s infinite;
   }
 
-  .hero-content {
+  @keyframes scrollPulse {
+    0%,100% { opacity: 0.3; transform: scaleY(0.6); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  .hero-center {
+    text-align: center;
     position: relative;
     z-index: 2;
-    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 24px;
+    animation: fadeInUp 1s 0.2s both;
   }
 
   .hero-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(80px, 15vw, 220px);
-    line-height: 0.85;
-    letter-spacing: -3px;
-    animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    font-size: clamp(72px, 14vw, 200px);
+    line-height: 0.88;
+    letter-spacing: -2px;
+    animation: fadeInUp 1s 0.4s both;
   }
 
-  .hero-title .outline {
+  .hero-title .line1 {
     color: transparent;
-    -webkit-text-stroke: 2px var(--white);
+    -webkit-text-stroke: 1.5px var(--white);
   }
 
-  .hero-title .filled {
+  .hero-title .line2 {
+    color: var(--white);
+  }
+
+  .hero-title .line2 em {
+    font-style: normal;
+    font-family: 'Playfair Display', serif;
     color: var(--amber);
     -webkit-text-stroke: 0;
-  }
-
-  @keyframes revealUp {
-    from { opacity: 0; transform: translateY(80px); }
-    to { opacity: 1; transform: translateY(0); }
+    font-size: 0.85em;
   }
 
   .hero-sub {
-    font-size: 13px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
+    margin-top: 32px;
+    font-size: 15px;
+    font-weight: 300;
     color: var(--cream);
-    margin-top: 30px;
-    animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s 0.6s both;
   }
 
-  .hero-line {
-    width: 60px;
-    height: 1px;
-    background: var(--amber);
-    margin: 24px auto;
-    animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+  .hero-sub strong {
+    color: var(--white);
+    font-weight: 600;
   }
 
-  .hero-cta {
+  .hero-btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 14px 40px;
+    margin-top: 36px;
+    padding: 16px 48px;
+    background: transparent;
     border: 1px solid var(--amber);
     color: var(--amber);
-    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
     font-size: 12px;
+    font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
+    text-decoration: none;
     transition: all 0.4s;
-    animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+    animation: fadeInUp 1s 0.8s both;
   }
 
-  .hero-cta:hover {
+  .hero-btn:hover {
     background: var(--amber);
     color: var(--black);
+    box-shadow: 0 0 40px rgba(212,148,60,0.2);
   }
 
-  .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    animation: fadeIn 1.5s 1.5s both;
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  .scroll-indicator span {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--dim);
-  }
-
-  .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--amber), transparent);
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
-  }
-
-  /* MARQUEE */
-  .marquee-section {
-    padding: 30px 0;
-    border-top: 1px solid var(--dim);
-    border-bottom: 1px solid var(--dim);
+  /* ============ MARQUEE ============ */
+  .marquee {
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     overflow: hidden;
-  }
-
-  .marquee-track {
-    display: flex;
-    animation: marquee 15s linear infinite;
     white-space: nowrap;
   }
 
-  @keyframes marquee {
+  .marquee.alt { border-top: none; }
+
+  .marquee-inner {
+    display: inline-flex;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .marquee.reverse .marquee-inner {
+    animation: scroll-right 20s linear infinite;
+  }
+
+  @keyframes scroll-left {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
-
-  .marquee-track span {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
-    letter-spacing: 6px;
-    color: var(--dim);
-    padding: 0 40px;
+  @keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
   }
 
-  .marquee-track span.accent { color: var(--amber); }
+  .marquee-inner span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    padding: 0 28px;
+    color: var(--dim);
+  }
 
-  /* FILES SECTION */
-  .files-section {
+  .marquee-inner span.dot {
+    color: var(--amber);
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  /* ============ TAGLINE ============ */
+  .tagline-section {
     padding: 100px 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 50px;
-  }
-
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(40px, 6vw, 70px);
-    letter-spacing: 2px;
-  }
-
-  .section-count {
-    font-size: 13px;
-    color: var(--dim);
-    letter-spacing: 3px;
-  }
-
-  .file-item {
-    display: flex;
-    align-items: center;
-    padding: 32px 0;
-    border-bottom: 1px solid var(--dim);
-    text-decoration: none;
-    color: var(--white);
-    transition: all 0.4s;
+    text-align: center;
     position: relative;
   }
 
-  .file-item:first-child {
-    border-top: 1px solid var(--dim);
-  }
-
-  .file-item::before {
-    content: '';
-    position: absolute;
-    left: -40px;
-    width: 0;
-    height: 100%;
-    background: var(--amber);
-    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    top: 0;
-  }
-
-  .file-item:hover::before { width: 4px; }
-
-  .file-item:hover {
-    padding-left: 20px;
-  }
-
-  .file-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 48px;
-    color: var(--dim);
-    width: 100px;
-    flex-shrink: 0;
-    transition: color 0.4s;
-  }
-
-  .file-item:hover .file-num { color: var(--amber); }
-
-  .file-details { flex: 1; }
-
-  .file-name {
-    font-size: 22px;
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4.5vw, 56px);
     font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 6px;
-    transition: color 0.4s;
+    font-style: italic;
+    color: var(--cream);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.3;
   }
 
-  .file-item:hover .file-name { color: var(--amber); }
-
-  .file-tag {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--dim);
-  }
-
-  .file-arrow {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 32px;
-    color: var(--dim);
-    transition: all 0.4s;
-  }
-
-  .file-item:hover .file-arrow {
+  .tagline em {
+    font-style: normal;
     color: var(--amber);
-    transform: translateX(10px);
   }
 
-  /* FOOTER */
-  .footer {
-    padding: 60px 40px;
-    border-top: 1px solid var(--dim);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
+  .tagline-line {
+    width: 50px;
+    height: 1px;
+    background: var(--amber);
+    margin: 30px auto 0;
+  }
+
+  /* ============ DOCUMENTS ============ */
+  .docs-section {
+    padding: 80px 40px 100px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
-  .footer-left {
+  .docs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .docs-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: var(--dim);
+    font-size: clamp(36px, 5vw, 60px);
+    letter-spacing: 3px;
+    line-height: 1;
   }
 
-  .footer-right {
+  .docs-count {
     font-size: 11px;
-    letter-spacing: 2px;
     color: var(--dim);
+    letter-spacing: 3px;
     text-transform: uppercase;
+    padding-bottom: 6px;
   }
 
-  .footer-right a {
-    color: var(--amber);
+  .doc-card {
+    display: grid;
+    grid-template-columns: 70px 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
     text-decoration: none;
+    color: var(--white);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
   }
 
-  /* MOBILE */
+  .doc-card::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--amber);
+    transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .doc-card:hover::after { width: 100%; }
+  .doc-card:hover { padding-left: 12px; }
+
+  .doc-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--border);
+    transition: color 0.4s;
+    line-height: 1;
+  }
+
+  .doc-card:hover .doc-num { color: var(--amber); }
+
+  .doc-info {}
+
+  .doc-name {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 5px;
+    transition: color 0.4s;
+  }
+
+  .doc-card:hover .doc-name { color: var(--amber-light); }
+
+  .doc-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .doc-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  .doc-card:hover .doc-tag {
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  .doc-arrow {
+    font-size: 28px;
+    color: var(--dim);
+    transition: all 0.4s;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+  }
+
+  .doc-card:hover .doc-arrow {
+    color: var(--amber);
+    transform: translateX(8px);
+  }
+
+  /* ============ BOTTOM MARQUEE ============ */
+  .marquee-big {
+    padding: 50px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid var(--border);
+  }
+
+  .marquee-big-inner {
+    display: inline-flex;
+    animation: scroll-left 12s linear infinite;
+  }
+
+  .marquee-big-inner span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 100px);
+    letter-spacing: 4px;
+    padding: 0 40px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border);
+    transition: all 0.3s;
+  }
+
+  .marquee-big-inner span.fill {
+    color: var(--amber);
+    -webkit-text-stroke: 0;
+    opacity: 0.6;
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    padding: 48px 40px;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--dim);
+    letter-spacing: 1px;
+  }
+
+  .footer-col { display: flex; flex-direction: column; gap: 6px; }
+  .footer-col:nth-child(2) { text-align: center; }
+  .footer-col:nth-child(3) { text-align: right; }
+
+  .footer-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 4px;
+  }
+
+  .footer a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer a:hover { color: var(--amber); }
+
+  /* ============ MOBILE ============ */
   @media (max-width: 768px) {
-    nav { padding: 20px 24px; }
-    .nav-links { gap: 20px; }
-    .nav-links a { font-size: 11px; letter-spacing: 1px; }
-    .files-section { padding: 60px 24px; }
-    .file-num { font-size: 32px; width: 60px; }
-    .file-name { font-size: 17px; }
-    .footer { padding: 40px 24px; flex-direction: column; gap: 16px; text-align: center; }
-    .section-header { flex-direction: column; gap: 8px; }
+    nav { padding: 18px 20px; }
+    .nav-brand { font-size: 22px; letter-spacing: 4px; }
+    .nav-right { gap: 16px; }
+    .nav-right a { font-size: 10px; }
+    .docs-section { padding: 60px 20px 80px; }
+    .doc-card { grid-template-columns: 48px 1fr auto; gap: 14px; }
+    .doc-num { font-size: 30px; }
+    .doc-name { font-size: 16px; }
+    .tagline-section { padding: 70px 24px; }
+    .footer { grid-template-columns: 1fr; text-align: center !important; padding: 36px 20px; }
+    .footer-col, .footer-col:nth-child(2), .footer-col:nth-child(3) { text-align: center; }
   }
 
   @media (max-width: 480px) {
-    .nav-links { display: none; }
-    .hero-title { letter-spacing: -1px; }
+    .nav-right a:not(:first-child) { display: none; }
+    .hero-btn { padding: 14px 32px; }
+    .docs-header { flex-direction: column; align-items: flex-start; gap: 8px; }
   }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="nav-logo">DOSE</div>
-  <ul class="nav-links">
-    <li><a href="#files">Pages</a></li>
-    <li><a href="https://dosecoffee.es" target="_blank">Shop</a></li>
-  </ul>
+  <a href="/" class="nav-brand">DOSE<em>.</em></a>
+  <div class="nav-right">
+    <a href="#docs">Pages</a>
+    <a href="https://dosecoffee.es" target="_blank">Shop</a>
+    <a href="mailto:info@dosecoffee.es">Contact</a>
+  </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-text">DOSE COFFEE · DOSE COFFEE · DOSE COFFEE · DOSE COFFEE · </div>
-  <div class="hero-content">
+  <div class="hero-center">
+    <div class="hero-eyebrow">Elche, Spain — Est. 2024</div>
     <h1 class="hero-title">
-      <span class="outline">DOSE</span><br>
-      <span class="filled">COFFEE</span>
+      <span class="line1">DOSE</span><br>
+      <span class="line2"><em>Coffee</em></span>
     </h1>
-    <p class="hero-sub">Biodegradable · Nespresso · Compatible</p>
-    <div class="hero-line"></div>
-    <a href="#files" class="hero-cta">Explore →</a>
+    <p class="hero-sub">biodegradable capsules <strong>·</strong> nespresso compatible <strong>·</strong> made in spain</p>
+    <a href="#docs" class="hero-btn">Explore ↓</a>
   </div>
-  <div class="scroll-indicator">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+  <div class="hero-scroll">
+    <span>Scroll to discover</span>
+    <div class="line"></div>
   </div>
 </section>
 
-<div class="marquee-section">
-  <div class="marquee-track">
-    <span>RESEARCH</span><span class="accent">✦</span>
-    <span>STRATEGY</span><span class="accent">✦</span>
-    <span>SUPPLIERS</span><span class="accent">✦</span>
-    <span>PACKAGING</span><span class="accent">✦</span>
-    <span>PRODUCTION</span><span class="accent">✦</span>
-    <span>RESEARCH</span><span class="accent">✦</span>
-    <span>STRATEGY</span><span class="accent">✦</span>
-    <span>SUPPLIERS</span><span class="accent">✦</span>
-    <span>PACKAGING</span><span class="accent">✦</span>
-    <span>PRODUCTION</span><span class="accent">✦</span>
+<!-- MARQUEE 1 -->
+<div class="marquee">
+  <div class="marquee-inner">
+    <span>RESEARCH</span><span class="dot">✦</span>
+    <span>SUPPLIERS</span><span class="dot">✦</span>
+    <span>STRATEGY</span><span class="dot">✦</span>
+    <span>PACKAGING</span><span class="dot">✦</span>
+    <span>PRODUCTION</span><span class="dot">✦</span>
+    <span>B2B</span><span class="dot">✦</span>
+    <span>RESEARCH</span><span class="dot">✦</span>
+    <span>SUPPLIERS</span><span class="dot">✦</span>
+    <span>STRATEGY</span><span class="dot">✦</span>
+    <span>PACKAGING</span><span class="dot">✦</span>
+    <span>PRODUCTION</span><span class="dot">✦</span>
+    <span>B2B</span><span class="dot">✦</span>
   </div>
 </div>
 
-<section class="files-section" id="files">
-  <div class="section-header">
-    <h2 class="section-title">DOCUMENTS</h2>
-    <span class="section-count">01 PAGES</span>
+<!-- TAGLINE -->
+<section class="tagline-section">
+  <p class="tagline">every great coffee starts with <em>the right people</em> behind it</p>
+  <div class="tagline-line"></div>
+</section>
+
+<!-- MARQUEE 2 -->
+<div class="marquee reverse alt">
+  <div class="marquee-inner">
+    <span>DRIP BAGS</span><span class="dot">✦</span>
+    <span>CAPSULES</span><span class="dot">✦</span>
+    <span>PRIVATE LABEL</span><span class="dot">✦</span>
+    <span>WHOLESALE</span><span class="dot">✦</span>
+    <span>CUSTOM BLEND</span><span class="dot">✦</span>
+    <span>ROASTERY</span><span class="dot">✦</span>
+    <span>DRIP BAGS</span><span class="dot">✦</span>
+    <span>CAPSULES</span><span class="dot">✦</span>
+    <span>PRIVATE LABEL</span><span class="dot">✦</span>
+    <span>WHOLESALE</span><span class="dot">✦</span>
+    <span>CUSTOM BLEND</span><span class="dot">✦</span>
+    <span>ROASTERY</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- DOCUMENTS -->
+<section class="docs-section" id="docs">
+  <div class="docs-header">
+    <h2 class="docs-title">DOCUMENTS</h2>
+    <span class="docs-count">01 page</span>
   </div>
 
-  <a href="/drip-bag-manufacturers-europe" class="file-item">
-    <div class="file-num">01</div>
-    <div class="file-details">
-      <div class="file-name">Drip Bag Manufacturers — Europe</div>
-      <div class="file-tag">Research · Feb 2026</div>
+  <a href="/drip-bag-manufacturers-europe" class="doc-card">
+    <div class="doc-num">01</div>
+    <div class="doc-info">
+      <div class="doc-name">Drip Bag Manufacturers — Europe</div>
+      <div class="doc-tags">
+        <span class="doc-tag">Research</span>
+        <span class="doc-tag">Feb 2026</span>
+      </div>
     </div>
-    <div class="file-arrow">→</div>
+    <div class="doc-arrow">→</div>
   </a>
 </section>
 
+<!-- BIG MARQUEE -->
+<div class="marquee-big">
+  <div class="marquee-big-inner">
+    <span>DOSE COFFEE</span>
+    <span class="fill">DOSE COFFEE</span>
+    <span>DOSE COFFEE</span>
+    <span class="fill">DOSE COFFEE</span>
+    <span>DOSE COFFEE</span>
+    <span class="fill">DOSE COFFEE</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-left">DOSE COFFEE © 2026</div>
-  <div class="footer-right">Elche, Spain · <a href="https://dosecoffee.es">dosecoffee.es</a></div>
+  <div class="footer-col">
+    <div class="footer-label">Brand</div>
+    <span>DOSE COFFEE © 2026</span>
+    <span>All rights reserved</span>
+  </div>
+  <div class="footer-col">
+    <div class="footer-label">Location</div>
+    <span>Elche, Valencia</span>
+    <span>Spain 🇪🇸</span>
+  </div>
+  <div class="footer-col">
+    <div class="footer-label">Links</div>
+    <a href="https://dosecoffee.es">dosecoffee.es</a>
+    <a href="mailto:info@dosecoffee.es">info@dosecoffee.es</a>
+  </div>
 </footer>
 
 </body>
