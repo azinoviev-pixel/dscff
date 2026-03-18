@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veronika — Full Strategic Document | March 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&display=swap');
+
+:root{--bg:#faf9f7;--s:#fff;--s2:#f0eeeb;--bd:#ddd8d0;--t:#1a1a1a;--t2:#555;--ac:#c4421a;--bl:#1a6bc4;--gr:#1a8a4a;--rd:#c41a1a;--am:#b87a00;--pu:#7a4ac4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--bg);color:var(--t);line-height:1.75;font-size:15px}
+.w{max-width:860px;margin:0 auto;padding:24px}
+.hd{padding:60px 0 40px;border-bottom:3px solid var(--t)}
+.hd .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
+.hd h1{font-family:'Literata',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:16px}
+.hd .sub{font-size:1rem;color:var(--t2);max-width:640px}
+.hd .dt{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--t2);margin-top:20px}
+nav{padding:30px 0;border-bottom:1px solid var(--bd)}
+nav h2{font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--t2);margin-bottom:16px}
+nav ol{list-style:none;columns:2;column-gap:30px}
+nav li{padding:4px 0;break-inside:avoid}
+nav a{color:var(--t);text-decoration:none;font-size:14px;font-weight:500}
+nav a:hover{color:var(--ac)}
+nav a .n{font-family:'IBM Plex Mono',monospace;color:var(--ac);margin-right:6px;font-size:12px}
+section{padding:40px 0;border-bottom:1px solid var(--bd)}
+.sn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ac);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+h2{font-family:'Literata',serif;font-size:1.6rem;font-weight:700;margin-bottom:20px;line-height:1.3}
+h3{font-size:1.15rem;font-weight:600;margin:28px 0 12px;color:var(--t);padding-bottom:6px;border-bottom:1px solid var(--bd)}
+h4{font-size:1rem;font-weight:600;margin:18px 0 8px;color:var(--bl)}
+p{margin-bottom:14px}
+strong{font-weight:600}
+a{color:var(--bl)}
+a:hover{color:var(--ac)}
+.bx{border-radius:6px;padding:16px 20px;margin:18px 0;border-left:4px solid}
+.bx-r{background:#fff0ee;border-color:var(--rd)}.bx-a{background:#fff8ee;border-color:var(--am)}.bx-g{background:#eefff3;border-color:var(--gr)}.bx-b{background:#eef5ff;border-color:var(--bl)}.bx-p{background:#f5eeff;border-color:var(--pu)}
+.bx .bt{font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.bx-r .bt{color:var(--rd)}.bx-a .bt{color:var(--am)}.bx-g .bt{color:var(--gr)}.bx-b .bt{color:var(--bl)}.bx-p .bt{color:var(--pu)}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--bd)}
+th{background:var(--s2);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:var(--t2)}
+tr:hover td{background:var(--s2)}
+.cd{background:var(--s);border:1px solid var(--bd);border-radius:8px;padding:18px;margin:14px 0}
+.cd h4{margin:0 0 6px;color:var(--ac)}
+.cd .d{font-size:13px;color:var(--t2);margin:3px 0}
+.cd .d b{color:var(--t)}
+.cd .lk{margin-top:8px;font-size:13px}
+.cd .lk a{margin-right:14px}
+.t{display:inline-block;padding:1px 8px;border-radius:12px;font-size:11px;font-weight:600}
+.t-r{background:#ffe0e0;color:var(--rd)}.t-a{background:#fff0d0;color:var(--am)}.t-g{background:#d0ffd8;color:var(--gr)}.t-b{background:#d0e8ff;color:var(--bl)}
+.st{display:flex;gap:16px;padding:16px;margin:12px 0;background:var(--s);border:1px solid var(--bd);border-radius:8px}
+.st .nm{font-family:'IBM Plex Mono',monospace;font-weight:700;color:var(--ac);font-size:1.4rem;min-width:36px}
+.st .bd{flex:1}.st .bd strong{display:block;margin-bottom:4px}
+.q{background:var(--s);border:1px solid var(--bd);border-radius:8px;padding:12px 16px;margin:8px 0;font-size:14px}
+.q::before{content:'→';color:var(--ac);font-weight:700;margin-right:8px}
+@media(max-width:600px){nav ol{columns:1}.st{flex-direction:column;gap:4px}}
+@media print{body{font-size:11pt;background:#fff}.w{padding:0}section{page-break-inside:avoid}.bx{break-inside:avoid}nav{display:none}}
+</style>
+</head>
+<body>
+<div class="w">
+
+<div class="hd">
+<div class="lb">Strategic Medical Document</div>
+<h1>Veronika Pogrebova<br>Full Plan — All Directions</h1>
+<p class="sub">Everything we found: Prof. Müller (March 18), all lateral clinics, research, contacts. Not fixated on FQAD — approaching from multiple angles.</p>
+<div class="dt">March 16, 2026 · v2 · Lloret de Mar</div>
+</div>
+
+<nav>
+<h2>Contents</h2>
+<ol>
+<li><a href="#s1"><span class="n">01</span> Actual Status — What We Know vs Don.t</a></li>
+<li><a href="#s2"><span class="n">02</span> Prof. Müller March 18 — Who He Is and Why</a></li>
+<li><a href="#s3"><span class="n">03</span> Questions for Müller</a></li>
+<li><a href="#s3b"><span class="n">03+</span> Müller — His Research and Connection to Veronika</a></li>
+<li><a href="#s4"><span class="n">04</span> Core: Not Depression — Why SSRIs Miss</a></li>
+<li><a href="#s5"><span class="n">05</span> What to Fix Now (Before Any Decisions)</a></li>
+<li><a href="#s6"><span class="n">06</span> Lateral Clinics — All Directions</a></li>
+<li><a href="#s7"><span class="n">07</span> Clonazepam — What We Know</a></li>
+<li><a href="#s8"><span class="n">08</span> MRI Contrast — Why We Decided Against It</a></li>
+<li><a href="#s9"><span class="n">09</span> CUN — Done, Pending, Postponed</a></li>
+<li><a href="#s10"><span class="n">10</span> Clinical Trials</a></li>
+<li><a href="#s11"><span class="n">11</span> Action Plan</a></li>
+</ol>
+</nav>
+
+<!-- S1 -->
+<section id="s1">
+<div class="sn">01</div>
+<h2>Actual Status — What We Know vs Don.t</h2>
+
+<p><strong>Veronika, 33.</strong> Lloret de Mar. FQAD after IV levofloxacin for pneumonia (March 2024, London). Zero psychiatric history before the antibiotic. Current: clonazepam 0.6 mg/day (0.3+0.3). TMS paused for 2 weeks.</p>
+
+<div class="bx bx-a">
+<div class="bt">⚠ What We DON'T Know</div>
+<p><strong>Current ferritin:</strong> Was 4 (Geneva 10/2025) and 9.98 (Spain 01/2026) — both BEFORE infusions. Completed 4 out of 5-6 IV infusions. Current level NOT checked. Must test.</p>
+<p><strong>Anti-TPO / Anti-TG:</strong> Never tested anywhere. Hashimoto's encephalopathy can cause all her symptoms with normal TSH.</p>
+<p><strong>Pharmacogenomics:</strong> Ordered at CUN 10.03, awaiting results.</p>
+<p><strong>CUN results 4-10.03:</strong> Full blood, genomic checkup, immunology — awaiting.</p>
+</div>
+
+<div class="bx bx-g">
+<div class="bt">✓ Clear (Geneva 10/2025)</div>
+<p>ANA, ANCA, rheumatoid factor, anti-CCP, celiac, HLA-B27, immunoglobulins, Lyme, syphilis, hepatitis, HIV. MRI 1.5T normal. EEG normal. MoCA 29/30.</p>
+</div>
+
+<div class="bx bx-r">
+<div class="bt">🔴 Confirmed Problems</div>
+<p>Lymphopenia (WBC 3.6, lymphocytes 0.83, CD4 323, CD8 246). Bartonella IgG 256 (norm &lt;64, IgM neg — past infection). Amenorrhea (FSH 3.18, estradiol &lt;35). Critical iron deficiency (pre-infusions). Creatinine 47 (malnutrition). BMI ~18.4. Paradoxical reactions: lorazepam, mirtazapine, escitalopram (liver ALT 173/AST 217).</p>
+</div>
+</section>
+
+<!-- S2 -->
+<section id="s2">
+<div class="sn">02</div>
+<h2>Prof. Dr. Thomas Müller — March 18, Berlin</h2>
+
+<div class="cd">
+<h4>Prof. Dr. med. Thomas Müller</h4>
+<p class="d"><b>Clinic:</b> Alexianer St. Joseph-Krankenhaus Berlin-Weißensee, Gartenstr. 1, 13088 Berlin</p>
+<p class="d"><b>Board certifications:</b> Neurology + Psychiatry + Psychotherapy (triple — rare)</p>
+<p class="d"><b>Publications:</b> 524+, 22,752 citations. Nature Rev Neurology, Lancet, Nature Genetics</p>
+<p class="d"><b>Experience:</b> Chief Physician since 2007. ~1,180 inpatients/year. 235+ Parkinson's, 490+ MS</p>
+<p class="d"><b>Motto:</b> "Wer heilt, hat Recht" — whoever heals is right</p>
+<p class="d"><b>Secretary:</b> +49 30 92790-92301 (Stephanie Rotter)</p>
+<p class="d"><b>Direct:</b> +49 30 92790-223</p>
+<p class="d"><b>Email:</b> Th.Mueller@alexius.de</p>
+<p class="d"><b>Admission:</b> +49 30 92790-327 (Mon-Fri 9-13), aufnahme-neurologie.sjkw@alexianer.de</p>
+<p class="d"><b>Wait time:</b> ~2 days (per Sanego.de reviews)</p>
+<div class="lk">
+<a href="https://www.alexianer-berlin-weissensee.de/leistungen/kliniken/klinik-fuer-neurologie/team/klinik-fuer-neurologie" target="_blank">Clinic</a>
+<a href="https://www.alexianer-berlin-weissensee.de/leistungen/kliniken/klinik-fuer-neurologie/leistungsangebote/zentrum-fuer-parkinsontherapie" target="_blank">Parkinson Centre</a>
+<a href="https://www.primomedico.com/en/doctor/prof-mueller-neurology-psychiatry-psychotherapy-berlin/" target="_blank">PRIMO MEDICO (Ru, En, De, Fr, Ar)</a>
+<a href="https://scholar.google.com/citations?user=kQxkDpIAAAAJ" target="_blank">Google Scholar</a>
+</div>
+</div>
+
+<h3>Who He Is and Why He Matters</h3>
+<p>Müller is <strong>NOT an FQAD specialist</strong>. Zero publications on fluoroquinolones. But his 35+ years of work land precisely on the same biochemical pathways damaged in Veronika:</p>
+
+<table>
+<tr><th>His Expertise</th><th>Intersection with FQAD</th><th>What He Can Do for Veronika</th></tr>
+<tr><td>Levodopa neurotoxicity via homocysteine (Nature Rev Neurology, Lancet)</td><td>FQ damage the same mitochondrial complexes I/IV as in Parkinson's</td><td>Assess mitochondrial damage, prescribe neuroprotective protocol</td></tr>
+<tr><td>Drug-induced movement disorders (lovastatin→parkinsonism, neuroleptics→NMS)</td><td>Veronika — paradoxical reactions to 3 drugs</td><td>Understand hypersensitivity mechanism, select safe medications</td></tr>
+<tr><td>DaTSCAN/SPECT/PET neuroimaging</td><td>FQ reduce dopamine (Golomb 2015)</td><td>Objectively check the dopaminergic system</td></tr>
+<tr><td>COMT/MAO-B inhibitors, homocysteine, oxidative stress</td><td>FQ chelate metals, disrupt methylation</td><td>Optimize detoxification</td></tr>
+<tr><td>14+ day multimodal inpatient program</td><td>FQAD is a multi-system condition</td><td>Comprehensive assessment + therapy selection</td></tr>
+<tr><td>Neuroprotector clinical trials</td><td>New drugs for mitochondrial protection</td><td>Access to experimental therapies</td></tr>
+</table>
+
+<p>His triple board certification (neurologist + psychiatrist + psychotherapist) is rare. Exactly what's needed for a neuropsychiatric case. He accepts international patients via PRIMO MEDICO (5 languages including Russian).</p>
+</section>
+
+<!-- S3 -->
+<section id="s3">
+<div class="sn">03</div>
+<h2>Questions for Müller Consultation</h2>
+
+<h3>Block 1: Assessment</h3>
+<div class="q">Neuropsychiatric symptoms after IV levofloxacin (2 years). Normal 1.5T MRI and EEG. Paradoxical reactions to 3 drugs (lorazepam, mirtazapine, escitalopram). Given your experience with drug-induced neurotoxicity — what diagnostic approach?</div>
+<div class="q">Have you encountered patients with persistent neuropsychiatric symptoms after mitochondrially-toxic drugs?</div>
+
+<h3>Block 2: Mitochondria</h3>
+<div class="q">Levofloxacin damages Complex I/IV via AIFM1 and IDH2 (Reinhardt 2025, Angewandte Chemie). What neuroprotection protocol would you recommend? CoQ10, NAD+ precursors (NR), creatine — your experience?</div>
+<div class="q">Should we check homocysteine and optimize methylation? (Your work on homocysteine-induced neurotoxicity)</div>
+<div class="q">UDCA showed mitochondrial rescue (Bandmann, Sheffield). Your opinion on off-label UDCA?</div>
+
+<h3>Block 3: Dopamine</h3>
+<div class="q">FQ reduce dopamine, norepinephrine, serotonin. Does a DaTSCAN make sense? What will it show/exclude?</div>
+
+<h3>Block 4: Paradoxical Reactions</h3>
+<div class="q">Lorazepam (GABA-A, NOT via CYP — meaning the problem is at the receptor level). Mirtazapine (akathisia from a single dose). Escitalopram (liver ALT 173/AST 217). Pharmacogenomics ordered — how to integrate?</div>
+
+<h3>Block 5: Treatment</h3>
+<div class="q">If depression is secondary to mitochondrial/GABA damage — are SSRIs missing the target? What do you recommend? Ketamine? Memantine?</div>
+<div class="q">Clonazepam 0.6 mg/day with GABA-A damage — protective effect or further receptor downregulation?</div>
+
+<h3>Block 6: Next Steps</h3>
+<div class="q">Multimodal inpatient program at your clinic (14+ days) — would it make sense for a comprehensive assessment?</div>
+<div class="q">Current neuroprotector clinical trials? Can she participate?</div>
+<div class="q">Which colleagues in Germany/Europe would you recommend for this case?</div>
+</section>
+
+<!-- S3b: MÜLLER RESEARCH -->
+<section id="s3b">
+<div class="sn">03+</div>
+<h2>Müller — His Research and Direct Connections to Veronika</h2>
+
+<p>Müller has never worked with FQAD. But his 35 years of research land on the exact same biochemical pathways that levofloxacin broke. Here are the specific intersections:</p>
+
+<h3>1. Mitochondria Complex I — Direct Match</h3>
+<p>Parkinson's = Complex I breakdown. FQAD = Complex I/IV breakdown (Reinhardt 2025: levofloxacin binds AIFM1 and IDH2). Müller spent his career studying how to protect Complex I from drug damage. Different drugs — same breakdown.</p>
+
+<h3>2. Homocysteine — His Signature Topic (and Potential Bomb for Veronika)</h3>
+<p><strong>What it is:</strong> an amino acid formed during methionine metabolism. Normally processed with B12, folate, and B6. If vitamins are low or enzymes genetically slow (MTHFR mutation) — homocysteine accumulates and becomes a neurotoxin.</p>
+<p><strong>What Müller showed:</strong> levodopa → COMT metabolism → homocysteine ↑ → brain endothelial damage → neurodegeneration (Nature Rev Neurology 2007, Lancet 1999, Archives Neurology 2004).</p>
+<p><strong>What elevated homocysteine does:</strong></p>
+<table>
+<tr><th>Target</th><th>Effect</th><th>Relevant to Veronika?</th></tr>
+<tr><td>Neurons</td><td>Direct neurotoxicity via oxidative stress</td><td>Yes — on top of FQ damage</td></tr>
+<tr><td>NMDA receptors</td><td>ACTIVATES them → excitotoxicity (same problem as FQ)</td><td>Yes — double hit</td></tr>
+<tr><td>Brain vasculature</td><td>Endothelial damage → impaired blood supply</td><td>Yes</td></tr>
+<tr><td>Serotonin/Dopamine</td><td>Disrupts methylation → reduces neurotransmitter synthesis</td><td>Yes — another synthesis block besides iron deficiency</td></tr>
+<tr><td>Peripheral nerves</td><td>Neurodegeneration (Müller, Arch Neurol 2004)</td><td>Yes — if SFN present</td></tr>
+<tr><td>Body vasculature</td><td>Atherosclerosis, clots, stroke, MI</td><td>Long-term risk</td></tr>
+</table>
+
+<div class="bx bx-r">
+<div class="bt">🔴 Veronika's Homocysteine Has NEVER Been Checked</div>
+<p>Not at Hirslanden, not in Spanish labs, not at CUN. Meanwhile: FQ chelate cobalt (B12 cofactor) and zinc → methylation disruption → homocysteine ↑. BMI 18.4, creatinine 47 (malnutrition) — B vitamins most likely depleted. Anton's homocysteine is chronically elevated (was "super high", now 18) — if there's an MTHFR variant, Veronika may have it too.</p>
+<p><strong>Action:</strong> check homocysteine (simple blood test). This is Müller's #1 topic — his signature question.</p>
+</div>
+
+<p><strong>Homocysteine norms:</strong> below 10 — ideal, 10-15 — normal, 15-30 — elevated, 30+ — serious.</p>
+
+<p><strong>How to lower (if elevated):</strong></p>
+<p>B12 as <strong>methylcobalamin</strong> (NOT cyanocobalamin) 1000 mcg/day + <strong>methylfolate</strong> (NOT regular folic acid) 400-800 mcg/day + B6 as <strong>P5P</strong> (pyridoxal-5-phosphate) 25-50 mg/day. Methylated forms bypass the MTHFR block. Additionally: <strong>betaine (TMG)</strong> 500-3000 mg/day (second processing pathway via BHMT). <strong>Creatine</strong> 5 g/day — handles ~40% of methylation, reducing the load. NAC — helps via glutathione. Results in 4-6 weeks.</p>
+
+<h3>3. Drug Damages the Nervous System — His Direct Experience</h3>
+<table>
+<tr><th>His Publication</th><th>What Happened</th><th>Parallel with Veronika</th></tr>
+<tr><td>Lancet 1988</td><td>Clozapine + carbamazepine → NMS (life-threatening)</td><td>Drug causes severe neurological reaction</td></tr>
+<tr><td>Annals of Neurology 1995</td><td>Lovastatin → unmasking latent parkinsonism</td><td>Common drug triggers hidden neurological condition</td></tr>
+<tr><td>Psycho/Nervenarzt 1997-98</td><td>Fluspirilene → movement disorders</td><td>Drug damages movement</td></tr>
+<tr><td>Neurology 1998</td><td>Lead → parkinsonism</td><td>External toxin breaks dopamine</td></tr>
+<tr><td>J Neural Transm 2004</td><td>Apomorphine paradoxically worsens</td><td>Lorazepam/mirtazapine in Veronika — paradoxical reaction</td></tr>
+<tr><td>Clin Neurophysiol 2001</td><td>Levodopa slows reaction time (should speed it up)</td><td>Drug does the opposite of expected</td></tr>
+</table>
+<p>He is one of the few neurologists who has DOCUMENTED and PUBLISHED cases where drugs do the opposite of expected. Veronika with three paradoxical reactions — this is his territory.</p>
+
+<h3>4. Oxidative Stress — Markers and Treatment</h3>
+<p>Publications on cysteinyl-glycine, S-adenosylmethionine (SAM), glutathione, CoQ10 (Neuroscience Letters 2003). Expert Rev Neurotherapeutics 2013: "Detoxification and antioxidant therapy in levodopa-induced neurodegeneration." Michalak 2017 (the main FQAD review) calls oxidative stress "the primary treatment target for FQAD". Literally the same biochemistry.</p>
+
+<h3>5. Dopamine — Can Check Objectively</h3>
+<p>Golomb 2015 showed reduced dopamine/norepinephrine/serotonin in FQ patients. 51 case reports of FQ-associated movement disorders (tremor, dyskinesias, one case of full parkinsonism). Müller can perform a <strong>DaTSCAN</strong> at his clinic — objectively check the dopamine system. Normal = no structural damage (good prognosis). Abnormal = something to treat (bupropion, pramipexole instead of SSRI).</p>
+
+<h3>6. Inpatient Stay 14+ Days — Medication Adjustment Under Supervision</h3>
+<p>Parkinson-Komplexbehandlung: medication + physiotherapy + occupational therapy + neuropsychology + psychotherapy + speech therapy. Individualized. With Veronika's paradoxical reactions — safer to trial new medications in hospital (doctors nearby 24/7) than at home.</p>
+
+<h3>7. Pharmacogenomics — He Can Interpret</h3>
+<p>Co-author of the A30P alpha-synuclein mutation discovery (Nature Genetics 1998). When CYP2C19/CYP2D6/MTHFR results arrive from CUN — he can interpret and link them to specific medication decisions at a deep level.</p>
+
+<h3>8. Triple Certification — Neurologist + Psychiatrist + Psychotherapist</h3>
+<p>Veronika: depression (psychiatry) + cognition (neurology) + paradoxical reactions (neuropharmacology) + GABA damage (neurology) + possibly dopamine ↓ (neurology). A regular psychiatrist doesn't understand Complex I. A regular neurologist doesn't treat depression. Müller — both + psychotherapist.</p>
+
+<div class="bx bx-a">
+<div class="bt">What Müller Does NOT Have</div>
+<p>Zero publications on fluoroquinolones. Zero experience with FQAD patients. Doesn't know GABA-A antagonism specifics of FQ (that's Pieper). Doesn't know about MRGPRX2/mast cells. His value lies in the depth of neuropharmacology and tools (DaTSCAN, inpatient, experimental), not in knowledge of FQAD as a disease.</p>
+</div>
+
+<div class="bx bx-g">
+<div class="bt">Müller + Pieper = Complete Picture</div>
+<p><strong>Pieper</strong> knows FQAD (2,500+ patients), prescribes gabapentin/memantine/micronutrients, but has NO DaTSCAN, inpatient facility, neurotoxicity research, or experience with paradoxical reactions at publication level. <strong>Müller</strong> knows neuropharmacology/mitochondria/paradoxical reactions deeper than anyone, but doesn't know FQAD. Together — two different angles on the same problem.</p>
+</div>
+</section>
+
+<!-- S4 -->
+<section id="s4">
+<div class="sn">04</div>
+<h2>Core: This Is Not Classical Depression</h2>
+
+<p>Every doctor so far has seen "depression" and treated with antidepressants. But the mechanism of her condition is not serotonin deficiency.</p>
+
+<table>
+<tr><th>Damaged System</th><th>How FQ Does It</th><th>What to Treat With (Not SSRIs)</th></tr>
+<tr><td>GABA-A receptors</td><td>Direct antagonism (Green 1997, Brit J Pharmacol)</td><td>Gabapentin, pregabalin, neurosteroids (zuranolone)</td></tr>
+<tr><td>Mitochondria Complex I/IV</td><td>Binding to AIFM1, IDH2 (Reinhardt 2025)</td><td>CoQ10, NR/NAD+, creatine, NAC, UDCA</td></tr>
+<tr><td>NMDA receptors</td><td>Excitotoxicity</td><td>Memantine, magnesium, ketamine</td></tr>
+<tr><td>nACh receptors</td><td>Blockade of α4β2 (Sanders 2022, ACS Chem Neurosci)</td><td>Nicotine patches (Pieper's recommendation)</td></tr>
+<tr><td>Iron</td><td>FQ are potent chelators (6-9x &gt; deferoxamine)</td><td>IV iron → ferritin &gt;100</td></tr>
+<tr><td>Estrogen/Hypothalamus</td><td>Stress + FQ → GnRH suppression</td><td>Transdermal estradiol + progesterone</td></tr>
+</table>
+
+<div class="bx bx-r">
+<div class="bt">Why SSRIs Are Contraindicated</div>
+<p><strong>Escitalopram</strong> — one of 3 antidepressants with exclusively negative mitochondrial effects (Neurosci &amp; Biobehav Rev 2021). Liver damage (ALT 173, AST 217) — not a coincidence.</p>
+<p><strong>Ferritin 4-10:</strong> the brain physically cannot synthesize serotonin (iron is a cofactor for tryptophan hydroxylase). An SSRI without substrate is useless.</p>
+<p><strong>NICE 2021 on ME/CFS</strong> (similar pathology): "Antidepressants should NOT be prescribed for the treatment of ME/CFS."</p>
+<p><strong>If trying nonetheless:</strong> the only option is <strong>desvenlafaxine</strong> (minimal hepatic metabolism, renal excretion, doesn't touch CYP). But ONLY after correcting iron and hormones.</p>
+</div>
+
+<div class="bx bx-b">
+<div class="bt">Devil's Advocate</div>
+<p>Possibly FQ triggered a genetic predisposition to MDD. But: lymphopenia + amenorrhea + ferritin 4 + liver from escitalopram + paradoxical reaction to lorazepam (not CYP — meaning receptor damage) = too many systemic failures for "just depression".</p>
+</div>
+</section>
+
+<!-- S5 -->
+<section id="s5">
+<div class="sn">05</div>
+<h2>What to Fix Now — Before Any Drug Decisions</h2>
+
+<p>Five things, each of which ALONE can cause her entire symptom set:</p>
+
+<div class="st"><span class="nm">1</span><div class="bd"><strong>Check Ferritin NOW</strong>After 4 infusions — current level unknown. If &lt;100 → more infusions. Target ≥100. At ferritin &lt;30 the brain cannot produce serotonin/dopamine. University of Michigan: 60% TRD-anxiety remission at ferritin &gt;30.</div></div>
+
+<div class="st"><span class="nm">2</span><div class="bd"><strong>Anti-TPO / Anti-TG — Test</strong>TSH normal (2.04), but thyroid antibodies have NEVER been checked. Hashimoto's Encephalopathy: depression + cognitive issues + fatigue with normal TSH. Steroid treatment — 36-93% response. Simple blood test.</div></div>
+
+<div class="st"><span class="nm">3</span><div class="bd"><strong>Homocysteine — Test (Müller's #1 Topic)</strong>Never checked in Veronika. FQ chelate cobalt (B12 cofactor) → methylation disruption → homocysteine ↑. Elevated homocysteine = neurotoxin + activates NMDA (excitotoxicity on top of FQ) + blocks serotonin/dopamine synthesis + damages peripheral nerves. Anton's is chronically elevated (18, previously higher) — possible family MTHFR variant. If elevated in Veronika — easy to treat: methylcobalamin B12 1000 mcg + methylfolate 400-800 mcg + P5P (B6) 25-50 mg + betaine (TMG) + creatine 5 g (handles 40% of methylation). Results in 4-6 weeks.</div></div>
+
+<div class="st"><span class="nm">4</span><div class="bd"><strong>Estrogen + Progesterone (Discuss with Endocrinologist/Gynecologist)</strong>FSH 3.18 + estradiol &lt;35 = hypogonadotropic hypogonadism. No estrogen → no allopregnanolone (endogenous GABA-A modulator, 10x stronger than benzodiazepines). Transdermal 17β-estradiol 100 mcg/day + micronized progesterone 200 mg at bedtime.</div></div>
+
+<div class="st"><span class="nm">5</span><div class="bd"><strong>Pharmacogenomics — Awaiting from CUN</strong>CYP2C19 poor metabolizer → explains escitalopram toxicity. CYP2D6 → mirtazapine. UGT2B15 → lorazepam. MTHFR → homocysteine. Will show which drugs are safe.</div></div>
+</section>
+
+<!-- S6 -->
+<section id="s6">
+<div class="sn">06</div>
+<h2>Lateral Clinics — Approaching from All Directions</h2>
+
+<p>Don't search for an "FQAD doctor" (almost none exist). Enter through doors of adjacent diseases with the same mechanisms: Long COVID, ME/CFS, Parkinson's, mitochondrial diseases, autoimmune psychiatry, SFN, MCAS.</p>
+
+<h3>🔴 FQAD-Specific</h3>
+
+<div class="cd">
+<h4>Dr. Stefan Pieper — Konstanz, Germany</h4>
+<p class="d"><b>The only</b> dedicated FQAD clinician in the world. <b>2,500+ FQAD patients</b>. Author of Springer monograph "FQAD — Pathogenesis, Diagnostics, Therapy" (2nd ed 2026). Prescribes gabapentin/pregabalin, memantine, micronutrients, acupuncture.</p>
+<p class="d"><b>Telemedicine:</b> yes. <b>Wait time:</b> months. <b>Cost:</b> ~€100-300/consultation</p>
+<div class="lk"><a href="https://fqad-support.com/" target="_blank">fqad-support.com</a></div>
+</div>
+
+<h3>🟠 Long COVID / ME/CFS</h3>
+
+<div class="cd">
+<h4>ME/CFS Medical Centre — Amsterdam-Duivendrecht, Netherlands</h4>
+<p class="d"><b>30 years experience</b> with post-infectious syndromes. Accepts NON-COVID patients. Breaks ME/CFS into metabolic, orthostatic, immune subtypes — directly applicable to FQAD.</p>
+<p class="d"><b>First consultation:</b> free (video/phone)</p>
+<p class="d"><b>Treatment:</b> LDN, ketotifen, nicotine patches, individualized protocols</p>
+<p class="d"><b>Email:</b> info@mecfsmc.eu · <b>Tel:</b> +31 20 470 6290</p>
+<div class="lk"><a href="https://mecfsmc.eu/" target="_blank">mecfsmc.eu</a></div>
+</div>
+
+<div class="cd">
+<h4>Charité Fatigue Centrum — Berlin, Germany</h4>
+<p class="d"><b>Prof. Carmen Scheibenbogen.</b> €10M National Clinical Study Group budget. Clinical trials: immunoadsorption, BC007, HBOT, methylprednisolone, TMS.</p>
+<p class="d">Work on β2-adrenergic autoantibodies — relevant if FQAD triggered autoimmune dysautonomia.</p>
+<div class="lk"><a href="https://cfc.charite.de/en/" target="_blank">cfc.charite.de</a> · <a href="https://cfc.charite.de/en/clinical_research/nksg" target="_blank">Research</a></div>
+</div>
+
+<div class="cd">
+<h4>Medect / Bragée Clinics — Stockholm, Sweden</h4>
+<p class="d">Specifically for international patients. No waiting list. 100+ professionals, 25+ specialist physicians. Publications on subcutaneous immunoglobulin and IV NaCl for dysautonomia.</p>
+<p class="d"><b>Cost:</b> ~$700 initial, ~$3,500 full ME/CFS evaluation, $400 infusions</p>
+<p class="d"><b>Tel:</b> +46 8 661 88 75</p>
+<div class="lk"><a href="https://medect.se/" target="_blank">medect.se</a> · <a href="https://bfrg.se/en/home/" target="_blank">Bragée</a></div>
+</div>
+
+<div class="cd">
+<h4>Mount Sinai CoRE — New York, USA</h4>
+<p class="d">The only major academic center that <b>explicitly treats NON-COVID chronic conditions</b> (ME/CFS, post-Lyme, EDS). 700 new/year. Photobiomodulation for mitochondria, TMS, active clinical trials (maraviroc, lumbrokinase).</p>
+<p class="d"><b>Email:</b> CORE@mountsinai.org · <b>Tel:</b> (212) 241-7658</p>
+</div>
+
+<div class="cd">
+<h4>Bateman Horne Center — Salt Lake City, USA</h4>
+<p class="d">Leading US ME/CFS clinical center. Oxaloacetate trial (mitochondrial metabolite): 27% fatigue reduction vs 10% placebo. Specializes in POTS, MCAS, SFN.</p>
+<p class="d"><b>Tel:</b> (801) 359-7400</p>
+<div class="lk"><a href="https://bfrg.se/en/home/" target="_blank">batemanhornecenter.org</a></div>
+</div>
+
+<h3>🟡 Autoimmune Psychiatry</h3>
+
+<div class="cd">
+<h4>Freiburg University Hospital — Prof. Dominique Endres</h4>
+<p class="d"><b>992 patients</b> with suspected autoimmune psychiatric conditions. Protocol: lumbar puncture + full antibody panel (including GABA-A) + FDG-PET brain + MRS + neuropsychology. DGPPN Research Award 2020, ECNP Rising Star 2021.</p>
+<p class="d"><b>Email:</b> dominique.endres@uniklinik-freiburg.de · <b>Tel:</b> +49 761 270-66360</p>
+<p class="d"><b>Secretary (Claudia Stark):</b> +49 761 270-66100, claudia.stark@uniklinik-freiburg.de</p>
+<div class="lk"><a href="https://www.uniklinik-freiburg.de/psych/team/endres.html" target="_blank">Profile</a> · <a href="https://www.uniklinik-freiburg.de/psych/forschung-research/research-groups/rg-tebartz-van-elst-endres.html" target="_blank">Research Group</a></div>
+</div>
+
+<div class="cd">
+<h4>Hospital Clínic Barcelona — Prof. Josep Dalmau</h4>
+<p class="d">Discovered anti-NMDA encephalitis and ~10 other autoimmune encephalopathies. Lab tests antibodies unavailable in standard panels.</p>
+<p class="d"><b>Email:</b> jdalmau@clinic.cat · <b>Address:</b> C/ Casanova 143, Floor 3A, Barcelona 08036</p>
+</div>
+
+<div class="cd">
+<h4>Epilepsy Centre Bethel, Bielefeld, Germany — Prof. Christian G. Bien</h4>
+<p class="d">In-house lab: all known neuronal antibodies simultaneously (biochip), paired serum+CSF. Efficient and fast.</p>
+<p class="d"><b>Email:</b> christian.bien@mara.de · <b>Tel:</b> +49 521 772-78800</p>
+</div>
+
+<h3>🟢 Mitochondrial Medicine</h3>
+
+<div class="cd">
+<h4>Radboudumc — Nijmegen, Netherlands</h4>
+<p class="d"><b>100+ experts</b> in mitochondria since 1975. Full measurement of complexes I-V, CoQ10, ATP. <b>Prof. Frans Russel</b> — specifically drug-induced mitochondrial toxicity. Co-author of Delphi consensus on safe drugs for mitochondrial diseases (including fluoroquinolones).</p>
+<p class="d"><b>Tel:</b> +31 24 361 1111</p>
+<div class="lk"><a href="https://www.radboudumc.nl/en/research/themes/mitochondrial-diseases" target="_blank">Radboudumc Mitochondrial</a></div>
+</div>
+
+<div class="cd">
+<h4>LMU Munich — Friedrich-Baur Institute</h4>
+<p class="d">Diagnoses toxic myopathies. Institutional links with Reinhardt 2025 authors (FQ mitochondrial toxicity — LMU co-authors). Muscle biopsy with full mitochondrial workup (~€2-5k). Prof. Thomas Klopstock (mitoNET).</p>
+</div>
+
+<div class="cd">
+<h4>Newcastle Wellcome Centre for Mitochondrial Research, UK</h4>
+<p class="d">Largest mitochondrial service in the world. 1,800+ patients. Muscle biopsy + full genome + quadruplex immunofluorescence OXPHOS.</p>
+<p class="d"><b>Tel:</b> 0191 282 0340 · NHS referral required</p>
+</div>
+
+<h3>🔵 Small Fiber Neuropathy (SFN)</h3>
+
+<div class="cd">
+<h4>Maastricht UMC+ — Netherlands</h4>
+<p class="d">World reference for SFN. <b>Prof. Catharina Faber.</b> 1,310+ patients. One-day protocol: skin biopsy + QSART + NCS + full blood + sodium channel genetics + Fabry. FQ increase neuropathy by 47% (JAMA Neurology 2019). 36.3% of SFN patients have anxiety/depression.</p>
+<p class="d"><b>Email:</b> c.faber@mumc.nl</p>
+</div>
+
+<div class="cd">
+<h4>University Hospital Würzburg — Germany</h4>
+<p class="d">Most comprehensive SFN battery: 6 tests (biopsy + QST + pain-related EP + corneal confocal microscopy + QSART + genetics). Prof. Claudia Sommer, Dr. Nurcan Üçeyler.</p>
+<p class="d"><b>Russian-speaking coordinator:</b> Artyomova_I@ukw.de</p>
+<p class="d"><b>Email:</b> ueceyler_n@ukw.de · <b>Tel:</b> +49 931 201-623542</p>
+</div>
+
+<h3>🟣 MCAS (Mast Cell Activation)</h3>
+
+<div class="cd">
+<h4>University Bonn — Prof. Gerhard Molderings</h4>
+<p class="d">500+ MCAS patients. Publications on neuropsychiatric manifestations of MCAS. Protocol: tryptase + histamine + PGD2 + N-methylhistamine + leukotriene E4 + chromogranin A. Treatment: H1/H2, cromolyn, ketotifen, omalizumab.</p>
+<p class="d"><b>Email:</b> molderings@uni-bonn.de</p>
+</div>
+
+<div class="cd">
+<h4>Charité Interdisziplinäres Mastozytose-Zentrum — Berlin</h4>
+<p class="d">Prof. Marcus Maurer, Dr. Frank Siebenhaar. ECNM Centre of Excellence. Avapritinib (first disease-modifying agent for mastocytosis).</p>
+<p class="d"><b>Email:</b> marcus.maurer@charite.de</p>
+</div>
+
+<h3>💊 Ketamine / Esketamine</h3>
+
+<div class="cd">
+<h4>Instituto Dr. Scheib — Mallorca, Frankfurt, Berlin</h4>
+<p class="d">IV ketamine since 2015 + rTMS + neurofeedback + intensive psychotherapy. International patients.</p>
+<p class="d"><b>Cost:</b> ~€6,000/week outpatient (Berlin)</p>
+<div class="lk"><a href="https://ketaminplus.com/" target="_blank">ketaminplus.com</a></div>
+</div>
+
+<p><strong>Esketamine (Spravato)</strong> — EMA-approved since 2019 for TRD. Works via NMDA (not GABA), theoretically advantageous for FQAD. Available at university psychiatric departments across Europe. €200-600/session.</p>
+
+<h3>🫁 HBOT (Hyperbaric Oxygen Therapy)</h3>
+
+<div class="cd">
+<h4>Sagol Center / Aviv Clinics — Israel, Florida, Dubai</h4>
+<p class="d"><b>Prof. Shai Efrati.</b> RCT in Long COVID: significant improvement in cognition, sleep, energy, pain. Effect 1 year+. 40 sessions, 2 ATA with oxygen fluctuations, 12 weeks. Strongest evidence base of all single interventions for this symptom set.</p>
+<p class="d"><b>Cost:</b> $36,000-51,000</p>
+<div class="lk"><a href="https://aviv-clinics.com/" target="_blank">aviv-clinics.com</a></div>
+</div>
+</section>
+
+<!-- S7 -->
+<section id="s7">
+<div class="sn">07</div>
+<h2>Clonazepam — What We Know</h2>
+
+<p><strong>Short-term helps</strong> — supports the damaged GABA system. <strong>Long-term harms</strong> — α1 subunit downregulation (41%/48h), epigenetic suppression via HDAC1/2, inhibitory synapse destruction (Bhatt, Mol Psych 2018). Chronic benzodiazepines themselves cause depression — up to 1/3 of users.</p>
+
+<p><strong>Pieper</strong> acknowledges clonazepam can help in FQAD but warns about side effects. Alliance for Benzodiazepine Best Practices identifies FQ exposure as a heightened vulnerability factor.</p>
+
+<div class="bx bx-a">
+<div class="bt">Strategy</div>
+<p>NOT now. First stabilization (iron, hormones, mitochondrial support). Then very slow taper per Ashton Manual (5-10% every 2-4 weeks). Bridge: gabapentin/pregabalin + memantine + magnesium ≥600 mg. Discuss specific plan with Müller and Pieper.</p>
+</div>
+</section>
+
+<!-- S8 -->
+<section id="s8">
+<div class="sn">08</div>
+<h2>MRI Contrast — Why We Decided Against It</h2>
+
+<p>Three specific risks for Veronika (details in separate research document):</p>
+
+<table>
+<tr><th>Risk</th><th>Source</th><th>Summary</th></tr>
+<tr><td>Iron deficiency → Gd accumulation in brain</td><td>Prybylski 2024, Frontiers Toxicol</td><td>4x more gadolinium retention with low ferritin</td></tr>
+<tr><td>Gd damages mitochondria</td><td>Feng 2010 NeuroTox; Bower 2019 Invest Radiol</td><td>Neuronal apoptosis via mitochondria (already damaged by FQ)</td></tr>
+<tr><td>Dotarem + FQ → same receptor MRGPRX2</td><td>Ruiz de Azcárate 2023, Allergy</td><td>Meglumine gadoterate activates mast cells via the same pathway as FQ</td></tr>
+</table>
+
+<p><strong>Also:</strong> for GABA-A encephalitis (what Gállego is looking for), contrast is useless — 0/10 patients showed enhancement (O'Connor). Diagnosis via FLAIR without contrast.</p>
+
+<p><strong>If we ever decide to do it:</strong> ProHance (gadoteridol) — no meglumine, no seizure threshold reduction. Minimum dose. Plenty of water.</p>
+</section>
+
+<!-- S9 -->
+<section id="s9">
+<div class="sn">09</div>
+<h2>CUN — Done, Pending, Postponed</h2>
+
+<h3>Completed and Paid (~€6,450)</h3>
+<table>
+<tr><th>Date</th><th>What</th><th>€</th></tr>
+<tr><td>4-5.03</td><td>Psychiatric hospitalization + biochemistry, hematology, vitamins B1/B6/B12, thyroid profile, liver, toxicology</td><td>1,175</td></tr>
+<tr><td>9-10.03</td><td>Genomic checkup (&lt;40) + internal medicine + full pharmacogenetic profile + immunology (ANA-blot, ANA-IFI, ANCA MPO/PR3) + biochemistry (folate, aldolase, β2-microglobulin, CK)</td><td>5,050</td></tr>
+<tr><td>10.03</td><td>Consultation Dr. Gállego (neuroimmunology)</td><td>225</td></tr>
+</table>
+
+<h3>Awaiting Results</h3>
+<p>Pharmacogenomics (C-Farmacogenética perfil Completo). Blood from March 4-10. Genomic study interpretation (x2, no visit).</p>
+
+<h3>Postponed (Not Now — Talk to Doctors First)</h3>
+<p>3T MRI SKYRA with contrast, EEG, lumbar puncture with neuronal antibody panel (anti-NMDA, anti-LGI1, anti-CASPR2, anti-GABA-A/B, anti-neuropil, onconeuronal). All scheduled for March 17 — postponed. Decision after consultations with Müller, Pieper, and analysis of received results.</p>
+
+<h3>CUN Physicians</h3>
+<table>
+<tr><th>Doctor</th><th>Specialty</th><th>Campus</th></tr>
+<tr><td>Dr. J. Gállego Pérez de Larraya</td><td>Neuroimmunology (lead physician)</td><td>Pamplona</td></tr>
+<tr><td>Dr. Patricio Molero (pmolero@unav.es)</td><td>Psychiatry, esketamine/Spravato</td><td>Pamplona</td></tr>
+<tr><td>Dr. Javier Arbizu</td><td>Nuclear medicine, PET neuroimaging</td><td>Pamplona</td></tr>
+<tr><td>Dr. Javier Escalada</td><td>Endocrinology (amenorrhea, hypothalamus)</td><td>Pamplona</td></tr>
+<tr><td>Dr. Ana Patiño</td><td>Genomics/pharmacogenetics</td><td>Pamplona</td></tr>
+<tr><td>Dr. Vicente Gajate García</td><td>Neuromuscular, Sudoscan</td><td>Madrid</td></tr>
+</table>
+<p>CUN Pamplona: +34 948 255 400 · CUN Madrid: +34 91 353 19 20</p>
+</section>
+
+<!-- S10 -->
+<section id="s10">
+<div class="sn">10</div>
+<h2>Clinical Trials</h2>
+
+<table>
+<tr><th>Trial</th><th>What</th><th>Where</th><th>Mechanism</th></tr>
+<tr><td>IA-PACS-CFS</td><td>Immunoadsorption</td><td>Charité Berlin</td><td>Autoantibody removal</td></tr>
+<tr><td>ResetME</td><td>Daratumumab (anti-CD38)</td><td>Bergen, Norway</td><td>Plasma cells</td></tr>
+<tr><td>LIFT (NCT06366724)</td><td>LDN + pyridostigmine</td><td>Harvard/BWH</td><td>Neuroinflammation + autonomics</td></tr>
+<tr><td>NOPARK III</td><td>NR 1000 mg</td><td>Bergen</td><td>NAD+/mitochondria</td></tr>
+<tr><td>NAC for ME/CFS</td><td>N-acetylcysteine</td><td>Recruiting</td><td>Glutathione</td></tr>
+<tr><td>IVIG for SFN (NCT04153422)</td><td>Panzyga</td><td>Glenview, IL</td><td>Autoimmune neuropathy</td></tr>
+<tr><td>EJS ACT-PD</td><td>UDCA 30 mg/kg</td><td>UK (1,600 patients)</td><td>Mitochondrial rescue</td></tr>
+<tr><td>RESTORE ME</td><td>Oxaloacetate 2000 mg</td><td>Bateman Horne, SLC</td><td>Mitochondrial metabolite</td></tr>
+</table>
+
+<p>No FQAD-specific trials exist. But a patient meeting ME/CFS criteria (Canadian Consensus) can participate in ME/CFS trials.</p>
+</section>
+
+<!-- S11 -->
+<section id="s11">
+<div class="sn">11</div>
+<h2>Action Plan</h2>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>March 18 — Prof. Müller, Berlin</strong>Show Hirslanden file + CUN orders. Tell the story: levofloxacin → 2 years neuropsychiatry → paradoxical reactions → clonazepam. Questions from sections 03 and 03+. Key topics: homocysteine (his #1 topic), DaTSCAN (dopamine objectively), neuroprotective protocol (CoQ10/SAM/glutathione — his data), 14+ day inpatient program, paradoxical reactions (his publications), clonazepam with GABA damage. Ask which colleagues he recommends. Discuss UDCA.</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>Run Blood Tests — Simple, Cheap, Potentially Game-Changing</strong>Ferritin (after 4 infusions — current unknown). Anti-TPO/Anti-TG (Hashimoto's encephalopathy — never checked). Homocysteine (Müller's topic, never checked — if elevated, it's a 5th independent neurotoxin on top of FQ). All three — simple venous blood draw.</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>In Parallel — Correct Deficiencies</strong>If ferritin &lt;100 → more infusions. Discuss HRT (estradiol + progesterone). Start magnesium 400-600 mg/day. If homocysteine elevated → methylcobalamin + methylfolate + P5P + betaine + creatine.</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>Get CUN Results</strong>Pharmacogenomics (CYP2C19/2D6, MTHFR), blood from March 4-10. Genomic checkup interpretation. Show Müller when ready.</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>Telemedicine Dr. Pieper</strong>FQAD-specific recommendations from the doctor with 2,500+ patients. Two different angles: Müller (neuropharmacology/mitochondria/paradoxical reactions), Pieper (FQAD practice/GABA/memantine/gabapentin).</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>Video Consultation ME/CFS Medical Centre Amsterdam</strong>Free first consultation. Third angle — not FQAD and not psychiatry, but 30 years of post-infectious syndrome experience.</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>Based on All Consultations — Decide Diagnostics</strong>DaTSCAN at Müller's? 14+ day inpatient? CUN lumbar puncture/MRI/EEG? SFN biopsy (Maastricht/Würzburg)? Mitochondrial workup (Radboudumc/LMU)? MCAS (Bonn)? Freiburg? FDG-PET?</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>Mitochondrial Support (One at a Time, Carefully)</strong>Creatine 5 g (also lowers homocysteine) → CoQ10 200 mg ubiquinol (Müller published on this) → NAC 600→1200 mg → NR 500→1000 mg (Bergen NADPARK data). Each new one 3-5 days apart.</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>Clonazepam — Not Now</strong>Discuss with Müller (neurologist+psychiatrist — can assess from both sides) and Pieper. Stabilization first. Taper — only later, very slowly (5-10%/2-4 weeks).</div></div>
+
+<div class="st"><span class="nm">→</span><div class="bd"><strong>If Depression Persists After Correcting Deficiencies</strong>Ketamine/esketamine (NMDA mechanism). Desvenlafaxine (only safe AD). Zuranolone (neurosteroid GABA-A PAM, EU approved 09/2025). Bupropion/pramipexole (if DaTSCAN shows dopamine ↓).</div></div>
+</section>
+
+<div style="text-align:center;padding:40px 0;color:var(--t2);font-size:13px">
+<p>Based on Hirslanden Geneva (10/2025), CUN Pamplona (03/2026), systematic reviews from PubMed/FDA/EMA, FQAD literature (Pieper, Michalak, Golomb, Reinhardt), ME/CFS guidelines (NICE 2021), and all prior research.</p>
+<p style="margin-top:8px">Not medical advice. All decisions — with treating physicians.</p>
+<p style="margin-top:16px;font-family:'IBM Plex Mono',monospace;letter-spacing:2px;font-size:11px">CONFIDENTIAL · MARCH 2026</p>
+</div>
+
+</div>
+</body>
+</html>
