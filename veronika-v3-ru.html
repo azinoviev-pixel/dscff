@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вероника Погребова — FQAD Руководство · RU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf9f3;--bg2:#f7f0e6;--bg3:#ede4d6;--border:#ddd2c2;--espresso:#2a1a0e;--bark:#5c3d24;--walnut:#7a5c42;--clay:#a08672;--rust:#b5432a;--rust-l:#fbeee9;--rust-b:#edc8bd;--green:#2b7a4b;--green-l:#edf7f1;--green-b:#bddcca;--navy:#1a4a6e;--navy-l:#edf4f8;--navy-b:#b8d0e0;--amber:#c07d12;--amber-l:#fdf5e3;--amber-b:#edd9a8;--txt:#2a1a0e;--txt2:#5c4a3a;--txt3:#8e7e6e;--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;font-size:16.5px;-webkit-font-smoothing:antialiased}
+.w{max-width:920px;margin:0 auto;padding:0 24px}@media(max-width:600px){.w{padding:0 16px}}
+nav{position:sticky;top:0;z-index:100;background:rgba(253,249,243,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:10px 0}.ni{max-width:920px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:10px;overflow-x:auto;scrollbar-width:none}.ni::-webkit-scrollbar{display:none}.nb{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--bark);white-space:nowrap;flex-shrink:0}nav a{color:var(--clay);text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap;padding:5px 10px;border-radius:6px;transition:.15s}nav a:hover{background:var(--bg3);color:var(--txt)}.lang-sw{margin-left:auto;flex-shrink:0}.lang-sw a{background:var(--espresso);color:var(--bg);padding:5px 14px;border-radius:6px;font-size:12px;font-weight:700;letter-spacing:1px}
+.hero{padding:64px 24px 48px;text-align:center;background:linear-gradient(180deg,var(--bg2),var(--bg));border-bottom:1px solid var(--border)}.hero-tag{display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--bark);background:var(--bg3);border:1px solid var(--border);padding:6px 20px;border-radius:100px;margin-bottom:18px}.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5.5vw,50px);font-weight:700;line-height:1.15;color:var(--espresso);margin-bottom:12px}.hero p{font-size:18px;color:var(--txt2);max-width:620px;margin:0 auto 18px;font-weight:300}.hero-chips{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.hero-chips span{font-family:'Fira Code',monospace;font-size:11.5px;color:var(--txt3);background:var(--white);padding:4px 14px;border-radius:6px;border:1px solid var(--border)}
+.s{padding:48px 0;border-bottom:1px solid var(--border)}.s:last-child{border-bottom:none}.sn{font-family:'Fira Code',monospace;font-size:11.5px;font-weight:500;color:var(--bark);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}.s h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,34px);font-weight:700;color:var(--espresso);margin-bottom:16px;line-height:1.2}.s h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--bark);margin:28px 0 10px}.s h4{font-size:16px;font-weight:700;color:var(--txt);margin:16px 0 6px}.s p{margin-bottom:12px;color:var(--txt2)}.s a{color:var(--bark);font-weight:600;text-underline-offset:3px}.divider{width:50px;height:3px;background:linear-gradient(90deg,var(--bark),var(--amber));border-radius:2px;margin:0 0 18px}
+.bx{padding:16px 20px;border-radius:10px;margin:14px 0;border-left:5px solid;font-size:15.5px;line-height:1.7}.bx b{display:block;margin-bottom:3px;font-size:14px}.bx-r{background:var(--rust-l);border-color:var(--rust);color:#5a1810}.bx-g{background:var(--green-l);border-color:var(--green);color:#14402a}.bx-b{background:var(--navy-l);border-color:var(--navy);color:#0d2a40}.bx-a{background:var(--amber-l);border-color:var(--amber);color:#4a3008}
+.tw{overflow-x:auto;border-radius:10px;border:1px solid var(--border);margin:16px 0;background:var(--white)}table{width:100%;border-collapse:collapse;font-size:15px}th{background:var(--espresso);color:#f4ede4;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.8px;padding:12px 16px;text-align:left}td{padding:10px 16px;border-bottom:1px solid var(--bg2);color:var(--txt2);vertical-align:top}td:first-child{color:var(--txt);font-weight:600}tr:last-child td{border-bottom:none}tr:hover td{background:var(--bg2)}
+.st{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:22px 22px 22px 26px;margin:14px 0;border-left:5px solid var(--bark);position:relative}.st-n{font-family:'Fira Code',monospace;font-size:44px;font-weight:700;color:rgba(92,61,36,.08);position:absolute;top:8px;right:16px;line-height:1}.st h4{font-family:'Cormorant Garamond',serif;font-size:18px;margin:0 0 8px;color:var(--bark)}.st p{font-size:15px;color:var(--txt2);margin-bottom:6px}
+.q{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:18px;margin:12px 0}.q-n{font-family:'Fira Code',monospace;font-size:11.5px;color:var(--bark);margin-bottom:3px}.q-t{font-weight:700;font-size:16.5px;color:var(--espresso);margin-bottom:8px;font-family:'Cormorant Garamond',serif}.q-h{font-size:14.5px;color:var(--txt3);font-style:italic;background:var(--bg2);padding:10px 14px;border-radius:7px;border-left:3px solid var(--bark);line-height:1.6}
+.vs{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin:8px 0}.vs h5{font-size:15px;font-weight:700;color:var(--amber);margin-bottom:4px;font-family:'Cormorant Garamond',serif}.vs p{font-size:14.5px;color:var(--txt2);margin:0}
+.ck{list-style:none;margin:0;padding:0}.ck li{padding:12px 16px;background:var(--white);border:1px solid var(--border);border-radius:8px;margin-bottom:8px;display:flex;align-items:flex-start;gap:12px;font-size:15.5px}.pr{font-family:'Fira Code',monospace;font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:5px;flex-shrink:0;white-space:nowrap}.pr-u{background:var(--rust-l);color:var(--rust);border:1px solid var(--rust-b)}.pr-h{background:var(--amber-l);color:var(--amber);border:1px solid var(--amber-b)}.pr-n{background:var(--navy-l);color:var(--navy);border:1px solid var(--navy-b)}
+.ad{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}@media(max-width:600px){.ad{grid-template-columns:1fr}}.ad-r{background:var(--rust-l);border:1px solid var(--rust-b);border-radius:10px;padding:20px}.ad-r h4{color:var(--rust);font-family:'Cormorant Garamond',serif;font-size:19px;margin:0 0 10px}.ad-r li{color:#5a1810;font-size:15px;margin-bottom:4px}.ad-g{background:var(--green-l);border:1px solid var(--green-b);border-radius:10px;padding:20px}.ad-g h4{color:var(--green);font-family:'Cormorant Garamond',serif;font-size:19px;margin:0 0 10px}.ad-g li{color:#14402a;font-size:15px;margin-bottom:4px}
+.lb{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;margin:14px 0}.lb h4{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--espresso);margin-bottom:10px}.lb a{display:block;color:var(--bark);font-size:15px;font-weight:500;padding:5px 0;border-bottom:1px solid var(--bg2);text-decoration:none}.lb a:last-child{border-bottom:none}.lb a:hover{color:var(--espresso)}.lb .ld{color:var(--txt3);font-size:12.5px;font-weight:400}
+.tl-item{position:relative;padding-left:28px;margin-bottom:20px}.tl-item::before{content:'';position:absolute;left:6px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--bark)}.tl-item::after{content:'';position:absolute;left:10px;top:22px;width:2px;height:calc(100% + 4px);background:var(--border)}.tl-item:last-child::after{display:none}.tl-date{font-family:'Fira Code',monospace;font-size:12px;color:var(--bark);font-weight:500}.tl-title{font-weight:700;font-size:16px;color:var(--espresso);margin:2px 0}.tl-desc{font-size:14.5px;color:var(--txt2)}
+.supp td:nth-child(2),.supp td:nth-child(3),.supp td:nth-child(4),.supp td:nth-child(5){text-align:center;font-family:'Fira Code',monospace;font-size:13px}.supp th:nth-child(2),.supp th:nth-child(3),.supp th:nth-child(4),.supp th:nth-child(5){text-align:center}
+ul,ol{margin:6px 0 14px 20px;color:var(--txt2)}li{margin-bottom:5px;font-size:15.5px}li strong{color:var(--txt)}
+.footer{padding:40px 24px;text-align:center;color:var(--txt3);font-size:13.5px;border-top:1px solid var(--border)}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+@media(max-width:600px){body{font-size:15.5px}.hero{padding:44px 16px 32px}.s{padding:32px 0}th,td{padding:8px 10px;font-size:13.5px}.st-n{font-size:32px}}
+</style>
+</head>
+<body>
+
+<nav><div class="ni">
+<span class="nb">FQAD Гайд</span>
+<a href="#timeline">Хронология</a>
+<a href="#diagnosis">Диагноз</a>
+<a href="#nicotine">Никотин</a>
+<a href="#supps">Добавки</a>
+<a href="#diet">Диета</a>
+<a href="#nogo">Запреты</a>
+<a href="#vs">Visual Snow</a>
+<a href="#reply">Ответ Pieper</a>
+<a href="#actions">Действия</a>
+<a href="#links">Ссылки</a>
+<span class="lang-sw"><a href="veronika-v3-en">EN</a></span>
+</div></nav>
+
+<header class="hero">
+<div class="hero-tag">Конфиденциально · Медицинская справка · v3</div>
+<h1>Вероника Погребова<br>Руководство по восстановлению FQAD</h1>
+<p>Полное досье: диагноз Dr. Pieper, план терапии, вся переписка, данные анкеты, план действий.</p>
+<div class="hero-chips">
+<span>Dr. Pieper · Констанц</span>
+<span>Дело открыто: Дек 2025</span>
+<span>Обновлено: Март 2026</span>
+</div>
+</header>
+
+<!-- 1. ХРОНОЛОГИЯ -->
+<section class="s" id="timeline"><div class="w">
+<div class="sn">01 · Полная хронология</div>
+<h2>История болезни по датам</h2>
+<div class="divider"></div>
+
+<div class="tl-item"><div class="tl-date">Январь 2024</div><div class="tl-title">Отравление фторхинолоном</div><div class="tl-desc">Госпитализация с пневмонией, Cromwell Hospital, Лондон. <strong>Левофлоксацин в/в 2 дня</strong>. Никто не предупредил о побочных эффектах. При выписке: суицидальные мысли, не может нормально ходить, тяжёлые психиатрические симптомы.</div></div>
+
+<div class="tl-item"><div class="tl-date">Янв 2024 — Апр 2024</div><div class="tl-title">Острая фаза</div><div class="tl-desc">Переезд из Англии в Испанию. Очень плохое состояние. Испанские врачи рекомендуют антидепрессанты — отказ.</div></div>
+
+<div class="tl-item"><div class="tl-date">Апр 2024 — ~Сен 2024</div><div class="tl-title">Восстановление с функциональной медициной</div><div class="tl-desc">Врач функциональной медицины из Новой Зеландии. Строгий протокол: добавки, чистая диета, без кофе, медитация, йога, спорт. Постепенное улучшение за 1+ год.</div></div>
+
+<div class="tl-item"><div class="tl-date">~Апр–Июл 2025</div><div class="tl-title">Почти нормальное состояние</div><div class="tl-desc">Работала, занималась спортом, нормально функционировала. Начала вечеринки, вино, сигареты.</div></div>
+
+<div class="tl-item"><div class="tl-date">~Июл–Сен 2025</div><div class="tl-title">Рецидив</div><div class="tl-desc">Через ~3 месяца алкоголя/сигарет всё вернулось. Полная бессонница, депрессия, панические атаки, суицидальные мысли. Женева: ЭЭГ норма, МРТ норма, <strong>Ферритин: 4</strong>. Барселона Delfos: во время исследования сна спала ХОРОШО без лекарств. 5 больниц, 40+ врачей.</div></div>
+
+<div class="tl-item"><div class="tl-date">~Окт 2025</div><div class="tl-title">Эсциталопрам</div><div class="tl-desc">Клоназепам + Эсциталопрам (Ципралекс) 10мг. После 6 недель: без улучшения, хуже. Повреждение печени: АЛТ ×7, АСТ ×5. Эсциталопрам отменён.</div></div>
+
+<div class="tl-item"><div class="tl-date">10 дек 2025</div><div class="tl-title">Антон пишет Dr. Pieper</div><div class="tl-desc">Первое письмо на kontakt@praxisdrpieper.de.</div></div>
+
+<div class="tl-item"><div class="tl-date">12 дек 2025</div><div class="tl-title">Pieper отвечает</div><div class="tl-desc">Предлагает индивидуальный план терапии. €293 через PayPal. Только email. Присылает анкету FQAD.</div></div>
+
+<div class="tl-item"><div class="tl-date">14 дек 2025</div><div class="tl-title">Отправлена анкета + бриф + оплата</div><div class="tl-desc">Заполненная анкета (Bell Scale: 40), бриф с полной историей болезни, оплата €293.</div></div>
+
+<div class="tl-item"><div class="tl-date">18 дек 2025</div><div class="tl-title">Pieper присылает план терапии</div><div class="tl-desc"><strong>Полный пакет:</strong> письмо с терапией, протокол FQAD (таблица добавок), Visual Snow PDF, Nicotine Patches PDF + исследования. Отдельным сообщением: "and please don't take SSRIs anymore!!!"</div></div>
+
+<div class="tl-item"><div class="tl-date">Конец дек 2025</div><div class="tl-title">Резкая отмена клоназепама (КАТАСТРОФА)</div><div class="tl-desc">Местный врач сказал прекратить клоназепам за 1 день. Дал кветиапин + хотел Дулоксетин (отказ). Клоназепам отменён резко, кветиапин — хуже. Через 7 дней без клоназепама: кризис → скорая. Клоназепам возвращён 0.2мг в каплях.</div></div>
+
+<div class="tl-item"><div class="tl-date">Янв 2026</div><div class="tl-title">Клоназепам утроен + ТМС</div><div class="tl-desc">Другой врач утроил клоназепам до 0.6мг/день. ZEM Wellness Clinic Altea: руминация, истощение. Невролог назначил ТМС Saint Protocol.</div></div>
+
+<div class="tl-item"><div class="tl-date">Янв–Фев 2026</div><div class="tl-title">Капельницы железа + ТМС</div><div class="tl-desc">Анализы (9 янв): Ферритин 9.98, Насыщение железом 13.19%, ГГТ 54, АСТ 39, Вит Д 26.1. Venofer в/в (4 из 5-6 сделано). ТМС: ~30 сеансов → похоже, стало хуже. Нет месячных 5+ месяцев, эстроген очень низкий.</div></div>
+
+<div class="tl-item"><div class="tl-date">14 фев 2026</div><div class="tl-title">Антон пишет обновление Pieper</div><div class="tl-desc">Подробное письмо о тяжёлом месяце. Никотиновое лечение не начато. Вероника не хочет жить, не может встать с кровати.</div></div>
+
+<div class="tl-item"><div class="tl-date">21 фев 2026</div><div class="tl-title">Ответ Pieper (последний)</div><div class="tl-desc">"Звучит очень драматично и как серьёзное ухудшение." Даёт <strong>ИЗМЕНЁННЫЙ протокол никотина</strong> (более осторожный: ¼ пластыря на 2 недели, а не 3 дня). Задаёт 9 вопросов. Предлагает прислать тест ГАМК/серотонин в Испанию.</div></div>
+
+<div class="tl-item"><div class="tl-date">21 фев 2026 (позже)</div><div class="tl-title">Pieper отправляет "???"</div><div class="tl-desc">Ответ НЕ отправлен.</div></div>
+
+<div class="tl-item"><div class="tl-date">18 мар 2026</div><div class="tl-title">Консультация Prof. Müller</div><div class="tl-desc">Alexianer Berlin. Результаты/рекомендации: ожидают.</div></div>
+
+<div class="bx bx-r"><b>⚠ КРИТИЧНО: Pieper НЕ ПОЛУЧИЛ ответ с 14 февраля. Он отправил "???" 21 февраля. Ответ просрочен на МЕСЯЦ.</b></div>
+</div></section>
+
+<!-- 2. ДИАГНОЗ -->
+<section class="s" id="diagnosis"><div class="w">
+<div class="sn">02 · Диагноз Pieper (18 дек 2025)</div>
+<h2>Что он установил и что это значит</h2>
+<div class="divider"></div>
+
+<div class="tw"><table>
+<tr><th width="30%">Параметр</th><th>Значение</th></tr>
+<tr><td>Диагноз</td><td>FQAD — Disability, ассоциированная с фторхинолонами. Тяжёлый синдром отравления левофлоксацином.</td></tr>
+<tr><td>Код МКБ</td><td>E72.8 — расстройство метаболизма ГАМК</td></tr>
+<tr><td>Основной фокус</td><td>Нейропсихиатрический — главное повреждение в мозге/нервной системе</td></tr>
+<tr><td>Препарат</td><td>Левофлоксацин (Levaquin/Tavanic) в/в, 2 дня, янв 2024</td></tr>
+<tr><td>Больница</td><td>Cromwell Hospital, Лондон</td></tr>
+<tr><td>Лечили</td><td>Пневмонию</td></tr>
+</table></div>
+
+<h3>Механизм 1: Разрушение системы ГАМК</h3>
+<p>ГАМК — успокаивающий нейромедиатор мозга, по сути «собственный валиум» организма. Фторхинолоны блокируют рецепторы ГАМК. При блокировке: тревога, бдительность, бессонница, паника, депрессия.</p>
+<div class="bx bx-r"><b>⚠ Бензодиазепины (клоназепам/лоразепам) КОНТРПРОДУКТИВНЫ</b>Прерывают собственное восстановление ГАМК. Не дают плотности рецепторов восстановиться. Нужно уходить — но ОЧЕНЬ МЕДЛЕННО, никогда резко.</div>
+
+<h3>Механизм 2: Блокировка ацетилхолиновых рецепторов (nAChR)</h3>
+<p>Метаболиты фторхинолонов блокируют никотиновые ацетилхолиновые рецепторы — главную структуру координированной нейронной коммуникации. Вызывает: когнитивный туман, нейромышечные проблемы, расстройства настроения, автономную дисфункцию, усталость, проблемы со сном.</p>
+<div class="bx bx-g"><b>✓ Решение: Никотиновые пластыри</b>Никотин имеет в 30 раз большее сродство к nAChR, чем ацетилхолин. Может вытеснить блокирующие агенты и восстановить сигнализацию.</div>
+
+<h3>Механизм 3: Гипервигилантность / Бей-Беги-Замри</h3>
+<p>Травматическое отравление заблокировало тело в постоянном режиме симпатической нервной системы. Тело должно научиться, что опасность прошла.</p>
+
+<h3>Цели терапии Pieper</h3>
+<ol>
+<li>Нейропротекция</li>
+<li>Адекватный и полноценный сон</li>
+<li>Укрепление системы ГАМК</li>
+<li>Снятие с бензодиазепинов</li>
+<li>Освобождение ацетилхолиновых рецепторов от блокирующих белков</li>
+<li>Терапия гипервигилантности с ежедневными упражнениями</li>
+</ol>
+</div></section>
+
+<!-- 3. НИКОТИН -->
+<section class="s" id="nicotine"><div class="w">
+<div class="sn">03 · Шаг 1 лечения</div>
+<h2>Никотиновые пластыри</h2>
+<div class="divider"></div>
+
+<div class="bx bx-a"><b>⚡ ДВЕ версии протокола. Версия от 21 февраля БОЛЕЕ ОСТОРОЖНАЯ из-за ухудшения состояния.</b></div>
+
+<h3>Оригинальный протокол (18 дек 2025)</h3>
+<div class="st"><div class="st-n">A</div><h4>Фаза 1: ¼ пластыря на 3 ДНЯ</h4><p>Пластыри 7-7.5мг/24ч. Заклеить ¾ скотчем (НЕ разрезать в Европе). Также: Амброксол 75мг ретард (или 3×30мг) ежедневно первые 10 дней — детокс.</p></div>
+<div class="st"><div class="st-n">B</div><h4>Фаза 2: ½ пластыря с 4-го дня, 4 недели</h4><p>Если нет улучшения через 4 недели: добавить Амброксол ещё на 10 дней.</p></div>
+
+<h3>Изменённый протокол (21 фев 2026 — последнее письмо)</h3>
+<div class="bx bx-b"><b>ℹ Pieper написал: "в этой ситуации я бы хотел, чтобы вы начали с никотиновых пластырей ОЧЕНЬ ОСТОРОЖНО"</b></div>
+<div class="st" style="border-left-color:var(--navy)"><div class="st-n">A</div><h4>Фаза 1: ¼ пластыря ежедневно 2 НЕДЕЛИ</h4><p>Намного медленнее (3 дня → 2 недели). Из-за тяжёлого ухудшения.</p></div>
+<div class="st" style="border-left-color:var(--navy)"><div class="st-n">B</div><h4>Фаза 2: ½ пластыря 4 недели</h4><p>Как в оригинале. Общий курс 4-8 недель.</p></div>
+
+<div class="bx bx-r"><b>⚠ ИСПОЛЬЗОВАТЬ ИЗМЕНЁННЫЙ ПРОТОКОЛ (21 фев) — он адаптирован под текущее ухудшенное состояние.</b></div>
+
+<h3>Правила</h3>
+<ul>
+<li><strong>НЕ разрезать пластыри в Европе</strong> — неконтролируемый выброс никотина</li>
+<li>Побочные эффекты 3-5 дней — обычно проходят</li>
+<li><strong>Если появится улучшение — не торопиться.</strong> Телу нужно время</li>
+<li><strong>Строгий пейсинг. Перенапряжение = рецидивы.</strong></li>
+<li>Амброксол 75мг ретард первые 10 дней = детокс от блокирующих агентов</li>
+<li>Отчёт Pieper через 4 недели после начала</li>
+</ul>
+</div></section>
+
+<!-- 4. ДОБАВКИ -->
+<section class="s" id="supps"><div class="w">
+<div class="sn">04 · Протокол FQAD (Дек 2025)</div>
+<h2>Добавки + B1 + Снижение бензо</h2>
+<div class="divider"></div>
+
+<div class="tw"><table class="supp">
+<tr><th>Препарат</th><th>Утро</th><th>День</th><th>Вечер</th><th>Ночь</th><th>Примечания</th></tr>
+<tr><td>MVM-A Antioxidant Protocol</td><td>1</td><td></td><td>1</td><td></td><td>Allergy Research Group</td></tr>
+<tr><td>Витамин D3 5000 МЕ + K2 200мкг MK7</td><td>1</td><td></td><td></td><td></td><td>С едой</td></tr>
+<tr><td>Омега-3 из водорослей</td><td>2</td><td></td><td></td><td></td><td>+ свежее льняное масло</td></tr>
+<tr><td>CoQ10 200мг</td><td>1</td><td></td><td></td><td></td><td>+ CDP-Choline 250мг</td></tr>
+<tr><td>Магний Глицинат 100мг</td><td>1</td><td>1</td><td>1</td><td></td><td>+ Кальций 1-2г</td></tr>
+<tr><td>Магний L-Треонат 2000мг</td><td></td><td></td><td>1</td><td>1-2</td><td>=144мг Mg/доза</td></tr>
+<tr><td>Спермидин 1.2мг</td><td>1</td><td>1</td><td>1</td><td></td><td>Или зародыши пшеницы 2 ст.л.</td></tr>
+<tr><td>L-Теанин 250 + L-Тирозин 200 + 5-HTP 25 + Таурин 1000мг</td><td>1-2</td><td></td><td></td><td></td><td>+ Ашваганда 500мг</td></tr>
+<tr><td>SAMe 400-500мг</td><td>1</td><td>(1)</td><td></td><td></td><td>+ ГАМК 750-1000мг</td></tr>
+<tr><td>Даридорексант (Quviviq) 50мг</td><td></td><td></td><td></td><td>1</td><td>Для снижения бензо</td></tr>
+<tr><td>Прегненолон 50мг</td><td></td><td></td><td>1</td><td></td><td>+ Экстракт граната</td></tr>
+<tr><td>NMN 500мг</td><td>1</td><td></td><td></td><td></td><td>4-12 недель → NAD+</td></tr>
+</table></div>
+
+<h4>Ежедневное питание:</h4>
+<ul>
+<li>MCT Energy Drink</li>
+<li>Органический костный бульон ИЛИ гидролизованный коллаген 20г + Вит С 1г + Биофлавоноиды</li>
+<li>Йогурт / Кефир / Комбуча + 24-штаммовый пробиотик</li>
+<li>Чаи с эффектом ГАМК: Валериана, Пассифлора, Мелисса, Хмель</li>
+</ul>
+
+<h3>Высокие дозы витамина B1 (Шаг 2)</h3>
+<p>3-недельный ежедневный курс. Нейропротекция. Можно одновременно с никотином.</p>
+
+<h3>Снижение бензодиазепинов (Шаг 3 — позже)</h3>
+<p>Текущая доза: 0.6мг/день клоназепама (3× доза до кризиса). <strong>Даридорексант (Quviviq) 50мг на ночь</strong> для поддержки. НЕ начинать снижение сейчас. Сначала стабилизация. Потом ~10% каждые 2-4 недели под контролем Pieper.</p>
+
+<h3>Терапия гипервигилантности (Шаг 4 — постоянно)</h3>
+<p>Ежедневно: полисвагальные упражнения, соматическое отслеживание, дыхание с длинным выдохом. Программы: <a href="https://www.eleanorsteinmd.ca/pain" target="_blank">Dr. Eleanor Stein</a>, <a href="https://guptaprogram.com/" target="_blank">Gupta Program</a> (<a href="https://apps.apple.com/us/app/gupta-program-brain-retraining/id6449983590" target="_blank">iOS App</a>), <a href="https://programs.somiainternational.com/" target="_blank">CFS School</a>. Книга: <a href="https://www.amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank">Bessel van der Kolk — "The Body Keeps the Score"</a>.</p>
+</div></section>
+
+<!-- 5. ДИЕТА -->
+<section class="s" id="diet"><div class="w">
+<div class="sn">05 · Диета</div>
+<h2>Требования к питанию</h2>
+<div class="divider"></div>
+<p><strong>Структура:</strong> Интервальное голодание 16:8 · Низкоуглеводная · Низкогистаминная</p>
+<div class="ad">
+<div class="ad-r"><h4>✘ Исключить</h4><ul style="list-style:none;margin:0"><li>✘ Глютен</li><li>✘ Промышленный сахар</li><li>✘ Белая мука</li><li>✘ Кофе</li><li>✘ Алкоголь</li><li>✘ Высокогистаминные продукты</li><li>✘ Неорганические продукты</li><li>✘ Рыба с ферм</li></ul></div>
+<div class="ad-g"><h4>✔ Употреблять</h4><ul style="list-style:none;margin:0"><li>✔ Только органика</li><li>✔ Только дикая рыба</li><li>✔ Низкоуглеводные блюда</li><li>✔ Костный бульон ежедневно</li><li>✔ Ферментированные продукты</li><li>✔ ГАМК-чаи</li><li>✔ Режим 16:8</li><li>✔ Свежее льняное масло</li></ul></div>
+</div>
+</div></section>
+
+<!-- 6. ЗАПРЕТЫ -->
+<section class="s" id="nogo"><div class="w">
+<div class="sn">06 · Абсолютные правила</div>
+<h2>Список запретов</h2>
+<div class="divider"></div>
+<div class="bx bx-r"><b>⚠ Любое из этого может вызвать рецидивы и тяжёлое ухудшение.</b></div>
+<ol>
+<li><strong>НЕТ СИОЗС / СИОЗСН</strong> — Эсциталопрам повредил печень. Pieper: "don't take SSRIs anymore!!!"</li>
+<li><strong>НЕТ Кветиапину</strong> — уже доказано ухудшение</li>
+<li><strong>НЕТ кортизону</strong></li>
+<li><strong>НЕТ НПВС</strong> (ибупрофен, аспирин)</li>
+<li><strong>НЕТ дополнительным бензо</strong></li>
+<li><strong>НЕТ вакцинациям</strong></li>
+<li><strong>НЕТ антибиотикам</strong> (особенно фторхинолонам — НИКОГДА)</li>
+<li><strong>НЕТ дальним перелётам</strong></li>
+<li><strong>НЕТ стрессу</strong></li>
+<li><strong>НЕТ антидепрессантам</strong> без одобрения Pieper</li>
+<li><strong>НЕТ ненужным медицинским вмешательствам</strong></li>
+</ol>
+</div></section>
+
+<!-- 7. VISUAL SNOW -->
+<section class="s" id="vs"><div class="w">
+<div class="sn">07 · Нужна оценка</div>
+<h2>Синдром Visual Snow</h2>
+<div class="divider"></div>
+<p>Pieper прислал материалы по VS и попросил Веронику проверить, совпадают ли симптомы. В анкете она отметила: зрительные нарушения + слуховые расстройства/тиннитус/вертиго.</p>
+<div class="bx bx-a"><b>⚡ Вероника должна просмотреть ВСЕ симптомы ниже и отметить свои. Включить в ответ Pieper.</b></div>
+
+<h4>Зрительные симптомы</h4>
+<div class="vs"><h5>Visual Snow</h5><p>"Пиксельное" зрение, мерцающие точки. Как помехи на ТВ. При любом свете, даже с закрытыми глазами.</p></div>
+<div class="vs"><h5>Послеобразы</h5><p>Отпечатки объектов остаются после взгляда. Даже от неярких предметов.</p></div>
+<div class="vs"><h5>Трейлинг</h5><p>Движущиеся объекты оставляют "хвост". Движение может казаться рывками.</p></div>
+<div class="vs"><h5>Мушки (Floaters)</h5><p>Паутинки, пятна. При VS: видны даже в помещении.</p></div>
+<div class="vs"><h5>Энтоптические явления</h5><p>Лейкоциты на извилистых дорожках. Даже на белых стенах в помещении.</p></div>
+<div class="vs"><h5>Визуалы с закрытыми глазами</h5><p>Цветные вихри (фиолетовые/оранжевые). Первые 10 мин темноты.</p></div>
+<div class="vs"><h5>Фотопсия</h5><p>Случайные яркие вспышки или пятна света.</p></div>
+<div class="vs"><h5>Светобоязнь</h5><p>Свет слишком яркий/болезненный. Очки даже в облачный день.</p></div>
+<div class="vs"><h5>Ночная слепота</h5><p>Трудности со зрением при слабом свете.</p></div>
+<div class="vs"><h5>Ореолы / Лучи / Блики</h5><p>Круги вокруг источников света, лучи, засветка.</p></div>
+<div class="vs"><h5>Гостинг</h5><p>Призрачные изображения вокруг предметов.</p></div>
+<div class="vs"><h5>Пульсирующее зрение</h5><p>Пульсация в ритме сердцебиения.</p></div>
+<div class="vs"><h5>Мерцание ("тепловые волны")</h5><p>Мерцание периферического зрения. Как марево.</p></div>
+<div class="vs"><h5>Потеря контраста</h5><p>Зрение темнее, выцветшее, туманное.</p></div>
+<div class="vs"><h5>Паттерн-блики</h5><p>Геометрические узоры мерцают. Чтение вызывает головную боль.</p></div>
+
+<h4>Незрительные симптомы VS</h4>
+<div class="vs"><h5>Тиннитус</h5><p>Звон, гул, свист в ушах. 62% пациентов VS.</p></div>
+<div class="vs"><h5>Деперсонализация / Дереализация</h5><p>Отчуждение от себя. Мир кажется нереальным.</p></div>
+<div class="vs"><h5>Мозговой туман</h5><p>Спутанность, забывчивость, нет фокуса.</p></div>
+<div class="vs"><h5>Головокружение / Тошнота</h5><p>Ощущение вращения, проблемы с балансом.</p></div>
+<div class="vs"><h5>Тремор / Подёргивания мышц</h5><p>22% пациентов VS имеют мелкий тремор.</p></div>
+</div></section>
+
+<!-- 8. ОТВЕТ PIEPER -->
+<section class="s" id="reply"><div class="w">
+<div class="sn">08 · Срочно — ответ просрочен</div>
+<h2>Вопросы Dr. Pieper + Наши вопросы</h2>
+<div class="divider"></div>
+
+<div class="bx bx-r"><b>⚠ Pieper отправил "???" 21 февраля. Ответ НЕ отправлен. Прошёл МЕСЯЦ. Это срочно.</b></div>
+
+<h3>Его вопросы (из письма 21 фев — ответить на ВСЕ)</h3>
+<div class="q"><div class="q-n">В1</div><div class="q-t">Какая ваша главная проблема?</div><div class="q-h">Тяжёлое низкое настроение, истощение, не может встать с кровати, суицидальные мысли. Руминация уменьшилась, но низкое состояние доминирует.</div></div>
+<div class="q"><div class="q-n">В2</div><div class="q-t">Оценка по шкале Белла?</div><div class="q-h">Была 40 в дек 2025. Сейчас намного хуже — вероятно 10-20.</div></div>
+<div class="q"><div class="q-n">В3</div><div class="q-t">Следуете ли плану лечения? Что изменилось?</div><div class="q-h">Перечислить все добавки из протокола — что принимается, что нет. Хронология: дек резкая отмена, янв ТМС, фев железо.</div></div>
+<div class="q"><div class="q-n">В4</div><div class="q-t">Какой протокол сейчас?</div><div class="q-h">Клоназепам 0.6мг/день. Капельницы железа 4/5-6. Какие добавки.</div></div>
+<div class="q"><div class="q-n">В5</div><div class="q-t">Следуете диетическим рекомендациям?</div><div class="q-h">16:8, без глютена, без сахара, низкогистаминная?</div></div>
+<div class="q"><div class="q-n">В6</div><div class="q-t">Что работает / что нет?</div><div class="q-h">ZEM клиника, ТМС (~30 сеансов — хуже?), капельницы железа.</div></div>
+<div class="q"><div class="q-n">В7</div><div class="q-t">Новые анализы крови?</div><div class="q-h">Прислать последние. Нужны анализы железа после капельниц.</div></div>
+<div class="q"><div class="q-n">В8</div><div class="q-t">Прислать тест ГАМК/Серотонин в Испанию?</div><div class="q-h"><strong>Ответить ДА.</strong> Адрес: Carrer Grecia 3, 17310 Lloret de Mar, Spain.</div></div>
+<div class="q"><div class="q-n">В9</div><div class="q-t">Ещё на ТМС?</div><div class="q-h">ТМС приостановлена после ~30 сеансов. Похоже, ухудшила состояние.</div></div>
+
+<h3>Вопросы, которые НУЖНО ЗАДАТЬ Pieper</h3>
+<div class="q"><div class="q-n">Спр 1</div><div class="q-t">Пластырь с эстрогеном — начинать?</div><div class="q-h">Нет месячных 5+ месяцев, эстроген очень низкий. Может ли это вызывать психиатрический кризис?</div></div>
+<div class="q"><div class="q-n">Спр 2</div><div class="q-t">Железо — ферритин 9.98 вызывает истощение/депрессию?</div><div class="q-h">Был 4, теперь 9.98. Всё ещё критически низкий. Более агрессивное восполнение?</div></div>
+<div class="q"><div class="q-n">Спр 3</div><div class="q-t">ТМС — 30 сеансов навредили?</div><div class="q-h">Исключить совсем? Или неправильное время?</div></div>
+<div class="q"><div class="q-n">Спр 4</div><div class="q-t">CUN Pamplona — делать МРТ/ЭЭГ/люмбальную пункцию?</div><div class="q-h">Отложены. МРТ с контрастом рискованно при дефиците железа.</div></div>
+<div class="q"><div class="q-n">Спр 5</div><div class="q-t">Visual Snow — чеклист Вероники</div><div class="q-h">Приложить список симптомов, которые она узнаёт.</div></div>
+<div class="q"><div class="q-n">Спр 6</div><div class="q-t">Англоязычная КПТ / резиденциальная программа?</div><div class="q-h">Вероника говорит RU/UA/EN — не DE/ES.</div></div>
+<div class="q"><div class="q-n">Спр 7</div><div class="q-t">График снижения клоназепама?</div><div class="q-h">0.6мг/день. Когда начинать? Pieper назначил Даридорексант.</div></div>
+<div class="q"><div class="q-n">Спр 8</div><div class="q-t">Результаты Prof. Müller</div><div class="q-h">Консультация 18.03.2026. Как соотносятся с планом Pieper?</div></div>
+</div></section>
+
+<!-- 9. ДЕЙСТВИЯ -->
+<section class="s" id="actions"><div class="w">
+<div class="sn">09 · Выполнить</div>
+<h2>Немедленный план действий</h2>
+<div class="divider"></div>
+
+<ul class="ck">
+<li><span class="pr pr-u">СЕГОДНЯ</span><div><strong>Ответить Dr. Pieper</strong> — все 9 вопросов + наши. Он послал "???" месяц назад.</div></li>
+<li><span class="pr pr-u">СЕГОДНЯ</span><div><strong>Купить никотиновые пластыри 7мг (24ч) + мед. скотч + Амброксол 75мг</strong></div></li>
+<li><span class="pr pr-u">ДЕНЬ 1</span><div><strong>Начать никотин ОСТОРОЖНО: ¼ пластыря на 2 НЕДЕЛИ</strong> + Амброксол</div></li>
+<li><span class="pr pr-u">ДЕНЬ 1-3</span><div><strong>Подтвердить: прислать тест ГАМК/Серотонин в Lloret de Mar</strong></div></li>
+<li><span class="pr pr-h">ДЕНЬ 1-7</span><div><strong>Завершить 5-ю капельницу железа</strong></div></li>
+<li><span class="pr pr-h">ДЕНЬ 1-7</span><div><strong>Вероника: просмотреть все симптомы Visual Snow, отметить свои</strong></div></li>
+<li><span class="pr pr-h">ЕЖЕДНЕВНО</span><div><strong>Начать полисвагальные + дыхательные упражнения — хотя бы 5 мин</strong></div></li>
+<li><span class="pr pr-n">ДЕНЬ 3-5</span><div><strong>Новые анализы: железо после капельниц + эстроген</strong></div></li>
+<li><span class="pr pr-n">НЕДЕЛЯ 1</span><div><strong>Заказать витамин B1 в высоких дозах</strong></div></li>
+<li><span class="pr pr-n">ПОСТОЯННО</span><div><strong>Клоназепам стабильно 0.6мг. ТМС на паузе.</strong></div></li>
+</ul>
+
+<h3>Временная шкала</h3>
+<div class="tw"><table>
+<tr><th>Когда</th><th>Что</th></tr>
+<tr><td>Недели 1-2</td><td>Никотин ¼ (осторожно). Амброксол 10 дней. Ответ Pieper. Капельница железа. Дыхательные упражнения.</td></tr>
+<tr><td>Недели 3-6</td><td>Никотин ½. Курс B1 (3 нед). Тест ГАМК/серотонин. Отчёт Pieper на 4-й неделе.</td></tr>
+<tr><td>Недели 6-8</td><td>Оценка никотина. План снижения бензо. Начать Даридорексант.</td></tr>
+<tr><td>Месяцы 3-6</td><td>Очень медленное снижение бензо. Нейропластичность. Переоценка.</td></tr>
+</table></div>
+</div></section>
+
+<!-- 10. ССЫЛКИ -->
+<section class="s" id="links"><div class="w">
+<div class="sn">10 · Все ресурсы</div>
+<h2>Ссылки, контакты, источники</h2>
+<div class="divider"></div>
+
+<div class="cg">
+<div class="lb"><h4>Исследования</h4>
+<a href="https://doi.org/10.1021/acschemneuro.2c00200" target="_blank">Sanders et al. 2022 — FQ антагонизм nAChR<span class="ld">ACS Chemical Neuroscience</span></a>
+<a href="https://doi.org/10.1186/s42234-023-00104-7" target="_blank">Leitzke 2023 — Никотин при нарушении nAChR<span class="ld">Bioelectronic Medicine</span></a>
+</div>
+<div class="lb"><h4>Программы (рекомендовано Pieper)</h4>
+<a href="https://www.eleanorsteinmd.ca/pain" target="_blank">Dr. Eleanor Stein — Healing Through Neuroplasticity<span class="ld">Самостоятельный курс</span></a>
+<a href="https://guptaprogram.com/" target="_blank">Gupta Program<span class="ld">Бесплатный пробный 28 дней</span></a>
+<a href="https://apps.apple.com/us/app/gupta-program-brain-retraining/id6449983590" target="_blank">Gupta App — App Store<span class="ld">iPhone / iPad</span></a>
+<a href="https://programs.somiainternational.com/" target="_blank">CFS School (Somia)<span class="ld">Травма-информированный подход</span></a>
+</div>
+<div class="lb"><h4>Книги</h4>
+<a href="https://www.amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank">Bessel van der Kolk — The Body Keeps the Score<span class="ld">Травмотерапия</span></a>
+</div>
+<div class="lb"><h4>Dr. Pieper</h4>
+<a href="mailto:kontakt@praxisdrpieper.de">kontakt@praxisdrpieper.de<span class="ld">Только email</span></a>
+<a href="#">Eichhornstrasse 7, 78464 Konstanz<span class="ld">Praxis für Integrative Medizin</span></a>
+<a href="#">Тел: 07531-61133</a>
+</div>
+<div class="lb"><h4>Другие контакты</h4>
+<a href="#">Prof. Thomas Müller — Alexianer Berlin<span class="ld">Консультация 18.03.2026</span></a>
+<a href="#">CUN Pamplona<span class="ld">МРТ/ЭЭГ/ЛП — ОТЛОЖЕНО</span></a>
+<a href="#">Антон Зиновьев — 641022317 · a.zinoviev@me.com</a>
+</div>
+</div>
+</div></section>
+
+<footer class="footer">
+<p>Для личного медицинского использования. Все решения согласовывать с Dr. Pieper.</p>
+<p style="margin-top:6px;color:var(--clay)">v3 RU · Март 2026 · Антон Зиновьев</p>
+</footer>
+</body>
+</html>
